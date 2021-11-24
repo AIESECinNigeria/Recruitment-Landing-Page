@@ -1,38 +1,71 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/* 
+================== General Styles ===================
+*/
+:root {
+	--AIESEC-Dark-Sub: #1d2129;
+	--AIESEC-Dark-Main: #20252f;
+	--AIESEC-Blue: #037ef3;
+	--AIESEC-GV-Red: #f85a40;
+	--AIESEC-Blue-rgb: 3, 126, 243;
+	--white: #ffffff;
+	--outline: #dcdcdc;
+	--light-grey: #a0a0a0;
+	font-size: 18px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body,
+html {
+	width: 100vw;
+	overflow-x: hidden;
+	min-height: 100vh;
+	margin: 0 auto;
+	scroll-behavior: smooth;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+	position: relative;
+	font-family: 'Lato', sans-serif;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Lato', sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
+ul {
+	list-style-type: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a {
+	text-decoration: none;
 }
+
+input {
+	transition: 0.5s;
+
+	&::placeholder {
+		font-family: 'Lato', sans-serif;
+	}
+
+	&[type='text']:hover {
+		box-shadow: 0px 0px 10px rgba(var(--AIESEC-Blue-rgb), 0.38);
+	}
+
+	&:focus {
+		outline-width: 0px;
+		border: 1px solid var(--AIESEC-Blue) !important;
+		box-shadow: 0px 0px 10px rgba(var(--AIESEC-Blue-rgb), 0.38);
+	}
+}
+
+button {
+	transition: 0.5s;
+	cursor: pointer;
+}
+/* 
+================== General Styles End===================
+*/

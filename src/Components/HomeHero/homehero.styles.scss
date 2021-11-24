@@ -1,0 +1,92 @@
+#home__hero {
+	width: 100%;
+	background: var(--white);
+
+	.home__hero__content {
+		width: 100%;
+		max-width: 1920px;
+		margin: 0 auto;
+
+		.hero__text {
+			width: 100%;
+			max-width: 601px;
+			margin: calc(12rem + 116px) 1rem 2.6rem 4rem;
+
+			h1 {
+				font-style: italic;
+				font-weight: 300;
+				font-size: 3.1rem;
+				line-height: 64px;
+				color: var(--AIESEC-Dark-Main);
+
+				span.highlighted {
+					font-weight: 700;
+				}
+			}
+		}
+
+		.hero__reels {
+			width: 100%;
+			height: 335px;
+			margin: 2.6rem 0;
+			position: relative;
+			cursor: pointer;
+
+            .poster{
+                width: 100%;
+				height: 100%;
+				position: absolute;
+                z-index: 1;
+                background: url('https://res.cloudinary.com/dkaflz24l/image/upload/v1637791882/AiN%20Website%20Assets/Reels-bg_adw2jt.png');
+
+                &.hide{
+                    z-index: -1;
+                }
+            }
+
+			.play__icon {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				z-index: 2;
+				top: 0;
+				left: 0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				svg:first-child {
+					animation: rotate 2s linear infinite reverse;
+				}
+
+				svg:nth-child(2) {
+					position: absolute;
+					z-index: 2;
+					top: 50%;
+					left: 50%;
+                    transform: translate(-50%, -50%);
+                    font-size: 1.2rem;
+                    color: #000;
+				}
+			}
+
+			&__video {
+				width: 100%;
+				height: 100%;
+			}
+
+			video{
+				object-fit: cover;
+			}
+
+			@keyframes rotate {
+				from {
+					transform: rotate(0deg);
+				}
+				to {
+					transform: rotate(360deg);
+				}
+			}
+		}
+	}
+}
