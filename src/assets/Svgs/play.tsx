@@ -1,6 +1,6 @@
-import React from 'react';
+import { FC } from 'react';
 
-const Play = () => {
+const Play: FC = () => {
 	return (
 		<svg
 			width='92'

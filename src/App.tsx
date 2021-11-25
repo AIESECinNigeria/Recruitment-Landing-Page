@@ -1,7 +1,7 @@
 import { Suspense } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 
-import LoadingPage from './pages/Home'
+import LoadingPage from './pages/loadingPage';
 import SidebarDesktop from './Components/SidebarDesktop';
 import MainContent from './Components/MainContent';
 import './App.scss';

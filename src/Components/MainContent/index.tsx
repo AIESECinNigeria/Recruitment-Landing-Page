@@ -13,6 +13,7 @@ const MainContent: FC = () => {
             <HeaderDesktop />
             <Routes>
                 <Route path='/' element={<Home />}/>
+                <Route path='*' element={<p>Not found</p>}/>
             </Routes>
             <Footer />
         </section>

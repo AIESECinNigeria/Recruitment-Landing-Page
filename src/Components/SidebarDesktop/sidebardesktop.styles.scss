@@ -79,12 +79,12 @@
 			margin-left: 1rem;
 			font-size: 1.5rem;
 			color: var(--light-grey);
-			animation: bounce infinite alternate-reverse 0.6s linear both;
+			animation: bounceLef infinite alternate-reverse 0.6s linear both;
 		}
 	}
 }
 
-@keyframes bounce {
+@keyframes bounceLef {
 	from {
 		transform: translateX(0px);
 	}
