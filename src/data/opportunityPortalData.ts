@@ -118,35 +118,35 @@ const opportunityPortalData = [
 				imgUrl:
 					'https://res.cloudinary.com/dkaflz24l/image/upload/v1637852872/AiN%20Website%20Assets/unsplash_QckxruozjRg_qs1ahy.png',
 				opportunityTitle: 'Web Developer',
-				location: 'Bucharest, Romania',
+				location: 'Marketing',
 			},
 			{
 				id: '1',
 				imgUrl:
 					'https://res.cloudinary.com/dkaflz24l/image/upload/v1637852871/AiN%20Website%20Assets/unsplash_bF2vsubyHcQ_sxvhbc.png',
 				opportunityTitle: 'Web Developer',
-				location: 'Bucharest, Romania',
+				location: 'Customer Experience',
 			},
 			{
 				id: '2',
 				imgUrl:
 					'https://res.cloudinary.com/dkaflz24l/image/upload/v1637852872/AiN%20Website%20Assets/unsplash_mO9vKbG5csg_v33ssq.png',
 				opportunityTitle: 'Web Developer',
-				location: 'Bucharest, Romania',
+				location: 'Sales and Business Development',
 			},
 			{
 				id: '3',
 				imgUrl:
 					'https://res.cloudinary.com/dkaflz24l/image/upload/v1637852871/AiN%20Website%20Assets/unsplash_kRNZiGKtz48_injhmr.png',
 				opportunityTitle: 'Web Developer',
-				location: 'Bucharest, Romania',
+				location: 'Finance',
 			},
 			{
 				id: '4',
 				imgUrl:
 					'https://res.cloudinary.com/dkaflz24l/image/upload/v1637844974/AiN%20Website%20Assets/Web-developer_djlf9a.png',
 				opportunityTitle: 'Web Developer',
-				location: 'Bucharest, Romania',
+				location: 'Human Reosurces',
 			},
 		],
 	},
