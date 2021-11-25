@@ -1,8 +1,9 @@
 import { FC, useEffect, useRef, useState } from 'react';
 import { GrPlayFill } from 'react-icons/gr';
 import { AiOutlineSearch } from 'react-icons/ai';
+//@ts-ignore
 import ModalVideo from 'react-modal-video';
-
+//@ts-check
 import Play from '../../assets/Svgs/play';
 import 'react-modal-video/scss/modal-video.scss';
 import './homehero.styles.scss';
@@ -14,9 +15,7 @@ const HomeHero: FC = () => {
 
 	useEffect(() => {
 		if (videoIsOpen) {
-			const iframe = document.querySelector(
-				'.modal-video-movie-wrap iframe'
-			)!;
+			const iframe = document.querySelector('.modal-video-movie-wrap iframe')!;
 			const style = document.createElement('style');
 			style.textContent = `
 				body video {
