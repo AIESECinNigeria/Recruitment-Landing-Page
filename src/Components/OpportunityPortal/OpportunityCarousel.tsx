@@ -1,8 +1,7 @@
 import { FC, useRef } from 'react';
 import { BsArrowUpRight, BsChevronLeft, BsChevronRight } from 'react-icons/bs';
-import { Splide, SplideSlide } from '@splidejs/react-splide';
 
-import '@splidejs/splide/dist/css/splide.min.css';
+import usePosition from '../../hooks/usePosition';
 
 interface OpportunityCarouselProps {
 	parentId: string;
@@ -18,46 +17,19 @@ const OpportunityCarousel: FC<OpportunityCarouselProps> = ({
 	parentId,
 	opportunities,
 }) => {
-	const splideRef = useRef<Splide>(null);
+	const carouselRef = useRef<HTMLDivElement>(null);
+	const { hasItemsOnLeft, hasItemsOnRight, scrollLeft, scrollRight } =
+		usePosition(carouselRef);
 
 	return (
-		<div className='carousel__wrapper'>
-			<Splide
-				ref={splideRef}
-				options={{
-					autoplay: true,
-					pagination: false,
-					arrows: false,
-					gap: '1.33rem',
-					drag: 'free',
-					focus: 'center',
-					autoScroll: {
-						speed: 1,
-					},
-				}}
-				renderControls={() => (
-					<div
-						className='controls'
-						onClick={() => console.log(splideRef.current)}
-					>
-						<button className='left' disabled={false}>
-							<BsChevronLeft
-								// className={
-								// 	splideRef.current!.slides[0]!.className.includes('is__next')
-								// 		? 'inactive'
-								// 		: ''
-								// }
-							/>
-						</button>
-
-						<button className='right' disabled={false}>
-							<BsChevronRight className={''} />
-						</button>
-					</div>
-				)}
-			>
+		<div
+			className='carousel__wrapper'
+			role='region'
+			aria-label='opportunities carousel'
+		>
+			<div className='carousel__wrapper__inner' ref={carouselRef}>
 				{opportunities.map((opportunity) => (
-					<SplideSlide key={opportunity.id}>
+					<div key={opportunity.id} className='carousel__slide'>
 						<div className='opportunity__role'>
 							<img
 								src={opportunity.imgUrl}
@@ -77,9 +49,28 @@ const OpportunityCarousel: FC<OpportunityCarouselProps> = ({
 								</div>
 							)}
 						</div>
-					</SplideSlide>
+					</div>
 				))}
-			</Splide>
+			</div>
+			<div className='controls'>
+				<button
+					className='left'
+					disabled={!hasItemsOnLeft}
+					aria-label='Previous slide'
+					onClick={scrollLeft}
+				>
+					<BsChevronLeft className={!hasItemsOnLeft ? 'inactive' : ''} />
+				</button>
+
+				<button
+					className='right'
+					disabled={!hasItemsOnRight}
+					aria-label='Next slide'
+					onClick={scrollRight}
+				>
+					<BsChevronRight className={!hasItemsOnRight ? 'inactive' : ''} />
+				</button>
+			</div>
 		</div>
 	);
 };

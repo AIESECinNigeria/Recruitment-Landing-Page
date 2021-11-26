@@ -8,7 +8,7 @@ import BorderBottomLongWhite from '../../assets/Svgs/BorderBottomLongWhite';
 import './opportunityportal.styles.scss';
 
 interface OpportunityPortalProps {
-    id: string,
+	id: string;
 	logoUrl: string;
 	logoAlt: string;
 	opportunityTitle: string;
@@ -19,7 +19,7 @@ interface OpportunityPortalProps {
 	topText: string | undefined;
 	viewMoreOpportunitiesLink: string;
 	opportunities: {
-        id: string;
+		id: string;
 		imgUrl: string;
 		opportunityTitle: string;
 		location: string;
@@ -27,7 +27,7 @@ interface OpportunityPortalProps {
 }
 
 const OpportunityPortal: FC<OpportunityPortalProps> = ({
-    id,
+	id,
 	logoUrl,
 	logoAlt,
 	opportunityTitle,
@@ -47,10 +47,7 @@ const OpportunityPortal: FC<OpportunityPortalProps> = ({
 						className='opportunity__logo'
 						animateIn='animate__flipInX'
 					>
-						<img
-							src={logoUrl}
-							alt={logoAlt}
-						/>
+						<img src={logoUrl} alt={logoAlt} />
 					</ScrollAnimation>
 					<div className='opportunity__cta'>
 						<div className='opportunity__desc'>
@@ -100,10 +97,7 @@ const OpportunityPortal: FC<OpportunityPortalProps> = ({
 							</p>
 						</a>
 					</div>
-					<OpportunityCarousel 
-                        parentId={id}
-                        opportunities={opportunities}
-                    />
+					<OpportunityCarousel parentId={id} opportunities={opportunities} />
 				</div>
 			</div>
 		</section>
