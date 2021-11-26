@@ -121,6 +121,13 @@
 						svg {
 							margin-left: 0.5rem;
 							color: var(--white);
+							transition: all .5s ease-in-out;
+						}
+					}
+
+					&:hover {
+						p svg {
+							transform: translateX(5px);
 						}
 					}
 

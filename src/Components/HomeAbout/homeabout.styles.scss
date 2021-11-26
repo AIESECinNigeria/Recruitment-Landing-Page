@@ -98,6 +98,13 @@
 						svg {
 							margin-left: 0.5rem;
 							color: var(--AIESEC-Blue);
+							transition: all .5s ease-in-out;
+						}
+					}
+
+					&:hover {
+						p svg {
+							transform: translateX(5px);
 						}
 					}
 				}

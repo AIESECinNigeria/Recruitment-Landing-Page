@@ -4,6 +4,7 @@ import HomeHero from '../../Components/HomeHero';
 import HomeAbout from '../../Components/HomeAbout';
 import OpportunityPortal from '../../Components/OpportunityPortal';
 import Testimonials from '../../Components/Testimonials';
+import BlogPreview from '../../Components/BlogPreview';
 import opportunityPortalData from '../../data/opportunityPortalData';
 import './home.styles.scss';
 
@@ -31,6 +32,7 @@ const Home: FC = () => {
 				/>
 			))}
 			<Testimonials />
+			<BlogPreview />
 		</main>
 	);
 };
