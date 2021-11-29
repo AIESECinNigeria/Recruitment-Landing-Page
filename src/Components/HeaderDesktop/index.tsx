@@ -1,10 +1,16 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
 import BorderBottom from '../../assets/Svgs/BorderBottom';
 import './headerdesktop.styles.scss';
 
 const Header: FC = () => {
+	const [navbarOpen, setNavbarOpen] = useState<boolean>(false);
+
+	const toggleNavbar = () => {
+		setNavbarOpen((navbarOpen) => !navbarOpen);
+	};
+
 	return (
 		<header id='header__desktop'>
 			<div className='header__desktop__content'>
@@ -16,6 +22,15 @@ const Header: FC = () => {
 							alt='AiN logo'
 						/>
 					</NavLink>
+				</div>
+
+				<div
+					className={`hamburger ${navbarOpen ? 'open' : ''}`}
+					onClick={toggleNavbar}
+				>
+					<span></span>
+					<span></span>
+					<span></span>
 				</div>
 
 				<nav className='header__navigation'>

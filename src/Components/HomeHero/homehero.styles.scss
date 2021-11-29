@@ -18,40 +18,64 @@
 				font-size: 3.1rem;
 				line-height: 64px;
 				color: var(--AIESEC-Dark-Main);
+				padding: .7rem;
 
 				span.highlighted {
 					font-weight: 700;
 				}
 			}
+
+			@media screen and (max-width: 800px) {
+				margin: calc(12rem) 1rem 2.6rem 1rem;
+			}
+
+			@media screen and (max-width: 480px) {
+				margin: calc(12rem) 1rem 2.6rem 1rem;
+
+				h1 {
+					font-size: 2.8rem;
+					line-height: 52px;
+				}
+			}
 		}
 
-		.hero__search__experiences {
+		.hero__search__experiences__container {
 			width: 100%;
 			max-width: 498px;
 			margin: 4.6rem 1rem 2.6rem 4rem;
-			border-bottom: 1px solid var(--outline);
-			display: flex;
-			align-items: center;
-			padding: 1rem 0;
-			cursor: pointer;
+			.hero__search__experiences {
+				border-bottom: 1px solid var(--outline);
+				display: flex;
+				align-items: center;
+				padding: 1rem 0;
+				cursor: pointer;
 
-			.search__placeholder {
-				font-size: 1rem;
-				line-height: 24px;
-				letter-spacing: -0.01em;
-				color: var(--AIESEC-Dark-Sub);
+				.search__placeholder {
+					font-size: 1rem;
+					line-height: 24px;
+					letter-spacing: -0.01em;
+					color: var(--AIESEC-Dark-Sub);
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
 
-				span {
-					font-style: italic;
-					font-weight: 400;
-					color: var(--outline);
+					span {
+						font-style: italic;
+						font-weight: 400;
+						color: var(--outline);
+					}
+				}
+
+				svg {
+					font-size: 1.2rem;
+					color: var(--AIESEC-Blue);
+					margin-left: 3rem;
 				}
 			}
 
-			svg {
-				font-size: 1.2rem;
-				color: var(--AIESEC-Blue);
-				margin-left: 3rem;
+			@media screen and (max-width: 800px) {
+				margin: 3.6rem auto 2.6rem;
+				padding: .7rem;
 			}
 		}
 
@@ -120,9 +144,9 @@
 		}
 	}
 
-	.modal-video-close-btn{
+	.modal-video-close-btn {
 		&::before,
-		&::after{
+		&::after {
 			background: var(--AIESEC-Blue);
 		}
 	}

@@ -82,6 +82,10 @@
 			animation: bounceLef infinite alternate-reverse 0.6s linear both;
 		}
 	}
+
+	@media screen and (max-width: 600px){
+		display: none;
+	}
 }
 
 @keyframes bounceLef {

@@ -37,12 +37,15 @@ const HomeHero: FC = () => {
 					</h1>
 				</div>
 
-				<div className='hero__search__experiences'>
-					<p className='search__placeholder'>
-						Search for an experience. <span>E.g. Marketing, design, HR...</span>
-					</p>
+				<div className='hero__search__experiences__container'>
+					<div className='hero__search__experiences'>
+						<p className='search__placeholder'>
+							Search for an experience.{' '}
+							<span>E.g. Marketing, design, HR...</span>
+						</p>
 
-					<AiOutlineSearch />
+						<AiOutlineSearch />
+					</div>
 				</div>
 
 				<div

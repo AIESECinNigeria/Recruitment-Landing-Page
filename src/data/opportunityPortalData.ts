@@ -101,6 +101,56 @@ const opportunityPortalData = [
 	},
 
 	{
+		id: 'GTe',
+		logoUrl:
+			'https://res.cloudinary.com/dkaflz24l/image/upload/v1637839967/AiN%20Website%20Assets/gta-logo_peia6e.svg',
+		logoAlt: 'GTe logo',
+		opportunityTitle: 'Become a Teacher',
+		opportunityText: `Develop your leadership through a volunteering project abroad, contributing to one of the Sustainable Development Goals`,
+		organizationsText: 'A school or institution',
+		durationText: 'For 9 to 78 weeks',
+		learnMoreLink: '##',
+		viewMoreOpportunitiesLink: '##',
+		opportunities: [
+			{
+				id: '0',
+				imgUrl:
+					'https://res.cloudinary.com/dkaflz24l/image/upload/v1637844974/AiN%20Website%20Assets/Web-developer_djlf9a.png',
+				opportunityTitle: 'Web Developer',
+				location: 'Bucharest, Romania',
+			},
+			{
+				id: '1',
+				imgUrl:
+					'https://res.cloudinary.com/dkaflz24l/image/upload/v1637852871/AiN%20Website%20Assets/unsplash_5sYQ1uD4pHU_xslqre.png',
+				opportunityTitle: 'Web Developer',
+				location: 'Bucharest, Romania',
+			},
+			{
+				id: '2',
+				imgUrl:
+					'https://res.cloudinary.com/dkaflz24l/image/upload/v1637852872/AiN%20Website%20Assets/unsplash_mEZ3PoFGs_k_l8h6ev.png',
+				opportunityTitle: 'Web Developer',
+				location: 'Bucharest, Romania',
+			},
+			{
+				id: '3',
+				imgUrl:
+					'https://res.cloudinary.com/dkaflz24l/image/upload/v1637852871/AiN%20Website%20Assets/unsplash_bU6JyhSI6zo_k9akzs.png',
+				opportunityTitle: 'Web Developer',
+				location: 'Bucharest, Romania',
+			},
+			{
+				id: '4',
+				imgUrl:
+					'https://res.cloudinary.com/dkaflz24l/image/upload/v1637852871/AiN%20Website%20Assets/unsplash_FlPc9_VocJ4_sawhe5.png',
+				opportunityTitle: 'Web Developer',
+				location: 'Bucharest, Romania',
+			},
+		],
+	},
+
+	{
 		id: 'AM',
 		logoUrl:
 			'https://res.cloudinary.com/dkaflz24l/image/upload/v1637840016/AiN%20Website%20Assets/membership-logo_mnvakp.svg',

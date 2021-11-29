@@ -4,4 +4,8 @@
 	background: var(--white);
 	overflow-x: hidden;
 	scroll-behavior: smooth;
+
+	@media screen and (max-width: 600px) {
+		margin-left: 0px;
+	}
 }

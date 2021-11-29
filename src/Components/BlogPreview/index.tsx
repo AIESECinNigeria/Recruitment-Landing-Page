@@ -34,6 +34,7 @@ const BlogPreview: FC = () => {
 			<div className='blog__preview__content'>
 				{blogPreviews.map((blogPreview) => (
 					<div
+						key={blogPreview.id}
 						className={`blog__preview ${
 							blogPreview.id === blogPreviews[blogPreviews.length - 1].id
 								? 'push__down'

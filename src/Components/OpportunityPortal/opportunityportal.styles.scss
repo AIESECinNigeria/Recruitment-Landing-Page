@@ -16,6 +16,10 @@
 			background: var(--AIESEC-GV-Red);
 		}
 
+		&.GTe {
+			background: var(--AIESEC-GTe);
+		}
+
 		&.AM {
 			background: var(--AIESEC-Blue);
 		}
@@ -121,7 +125,7 @@
 						svg {
 							margin-left: 0.5rem;
 							color: var(--white);
-							transition: all .5s ease-in-out;
+							transition: all 0.5s ease-in-out;
 						}
 					}
 
@@ -138,6 +142,10 @@
 					@media screen and (max-width: 883px) {
 						margin-top: 2rem;
 					}
+
+					@media screen and (max-width: 485px) {
+						margin: 2.5rem 0 2.5rem auto;
+					}
 				}
 			}
 		}
@@ -152,7 +160,7 @@
 			height: 100%;
 			margin: 0 auto;
 			max-width: 1440px;
-			transform: translateX(85px);
+			padding-left: 85px;
 
 			.top {
 				width: 100%;
@@ -160,7 +168,9 @@
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
+				flex-wrap: wrap;
 				margin-bottom: 1.5rem;
+				padding-right: 0.5rem;
 
 				p {
 					font-weight: 600;
@@ -222,7 +232,7 @@
 					margin-left: 1.33rem;
 
 					&:last-child {
-						margin-right: 100px;
+						margin-right: 20px;
 					}
 
 					.opportunity__role {
@@ -341,6 +351,10 @@
 						margin-right: 1.5rem;
 					}
 				}
+			}
+
+			@media screen and (max-width: 600px) {
+				padding-left: 1.5rem;
 			}
 		}
 	}

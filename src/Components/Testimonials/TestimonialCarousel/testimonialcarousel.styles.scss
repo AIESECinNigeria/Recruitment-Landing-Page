@@ -8,6 +8,7 @@
 
 	.testimonies {
 		min-height: 350px;
+		height: 100%;
 		width: 100%;
 		display: flex;
 		padding: 2rem;
@@ -41,17 +42,21 @@
 			.testimony__quote {
 				font-style: italic;
 				font-weight: 600;
-				font-size: 20px;
+				font-size: 1.1rem;
 				line-height: 32px;
 				letter-spacing: -0.02em;
 				color: var(--AIESEC-Dark-Sub);
 				margin-bottom: 2rem;
+
+				@media screen and (max-width: 400px) {
+					line-height: 24px;
+				}
 			}
 
 			.testifier {
 				display: flex;
 				align-items: center;
-				font-size: 0.9;
+				font-size: 0.9rem;
 				letter-spacing: -0.01em;
 				color: var(--AIESEC-Dark-Sub);
 
@@ -76,7 +81,16 @@
 					opacity: 0.7;
 					margin-left: 8px;
 				}
+
+				@media screen and (max-width: 357px){
+					font-size: 14px;
+					flex-wrap: wrap;
+				}
 			}
+		}
+
+		@media screen and (max-width: 500px){
+			min-height: 420px;
 		}
 	}
 
