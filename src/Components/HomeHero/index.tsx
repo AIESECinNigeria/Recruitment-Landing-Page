@@ -1,4 +1,4 @@
-import { FC, useEffect, useRef, useState } from 'react';
+import { FC, useRef, useState } from 'react';
 import { GrPlayFill } from 'react-icons/gr';
 import { AiOutlineSearch } from 'react-icons/ai';
 //@ts-ignore
@@ -13,19 +13,18 @@ const HomeHero: FC = () => {
 	const posterRef = useRef<HTMLDivElement | null>(null);
 	const [videoIsOpen, setVideoIsOpen] = useState<boolean>(false);
 
-	useEffect(() => {
-		if (videoIsOpen) {
-			const iframe = document.querySelector('.modal-video-movie-wrap iframe')!;
-			const style = document.createElement('style');
-			style.textContent = `
-				body video {
-					width: 100%;
-				}
-			`;
-			// iframe?.cotentDocument?.head.appendChild(style);
-			console.log(iframe.DOCUMENT_NODE);
-		}
-	}, [videoIsOpen]);
+	// useEffect(() => {
+	// 	if (videoIsOpen) {
+	// 		const iframe = document.querySelector('.modal-video-movie-wrap iframe')!;
+	// 		const style = document.createElement('style');
+	// 		style.textContent = `
+	// 			body video {
+	// 				width: 100%;
+	// 			}
+	// 		`;
+	// 		iframe?.contentDocument?.head.appendChild(style);
+	// 	}
+	// }, [videoIsOpen]);
 
 	return (
 		<section id='home__hero'>

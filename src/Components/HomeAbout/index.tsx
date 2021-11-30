@@ -79,7 +79,51 @@ const HomeAbout: FC = () => {
 				</div>
 
 				<div className='home__about__partners'>
+					<h1 className='title'>OUR PARTNERS</h1>
 					<div className='partners__logos'>
+						<div className='pwc'>
+							<img
+								src='https://res.cloudinary.com/dkaflz24l/image/upload/v1637802500/AiN%20Website%20Assets/pwc-logo_nera8m.png'
+								alt='pwc-logo'
+							/>
+						</div>
+						<div className='cc__hub'>
+							<img
+								src='https://res.cloudinary.com/dkaflz24l/image/upload/v1637802500/AiN%20Website%20Assets/cchub-logo_w9zmwk.png'
+								alt='cchub-logo'
+							/>
+						</div>
+						<div className='JCI'>
+							<img
+								src='https://res.cloudinary.com/dkaflz24l/image/upload/v1637802500/AiN%20Website%20Assets/jci-logo_qjj6zl.png'
+								alt='jci-logo'
+							/>
+						</div>
+						<div className='sahel'>
+							<img
+								src='https://res.cloudinary.com/dkaflz24l/image/upload/v1637802500/AiN%20Website%20Assets/saheal-logo_jfnre2.png'
+								alt='sahel-logo'
+							/>
+						</div>
+						<div className='study__free'>
+							<img
+								src='https://res.cloudinary.com/dkaflz24l/image/upload/v1637802501/AiN%20Website%20Assets/study-free-logo_jt6dae.png'
+								alt='study-free-logo'
+							/>
+						</div>
+						<div className='my__farmbase'>
+							<img
+								src='https://res.cloudinary.com/dkaflz24l/image/upload/v1637802500/AiN%20Website%20Assets/My-farmbase-logo_kddd5e.png'
+								alt='my-farmbase-logo'
+							/>
+						</div>
+						<div className='cowrywise'>
+							<img
+								src='https://res.cloudinary.com/dkaflz24l/image/upload/v1637802500/AiN%20Website%20Assets/cowrywise-logo_yvnwrk.png'
+								alt='cowrywise-logo'
+							/>
+						</div>
+
 						<div className='pwc'>
 							<img
 								src='https://res.cloudinary.com/dkaflz24l/image/upload/v1637802500/AiN%20Website%20Assets/pwc-logo_nera8m.png'
