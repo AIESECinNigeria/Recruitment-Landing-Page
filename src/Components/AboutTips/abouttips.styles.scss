@@ -32,6 +32,8 @@
 
 		.tips__container {
 			width: 100%;
+			max-width: 1920px;
+			margin: 0 auto;
 
 			.tip {
 				min-width: 294px;
