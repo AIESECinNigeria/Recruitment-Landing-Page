@@ -5,11 +5,18 @@ import tipData from '../../data/tipsData';
 import '@splidejs/splide/dist/css/themes/splide-skyblue.min.css';
 import './abouttips.styles.scss';
 
-const AboutTips: FC = () => {
+interface AboutTipsProps {
+	titleText?: string;
+	tipsFor?: string;
+}
+
+const AboutTips: FC<AboutTipsProps> = ({ titleText, tipsFor }) => {
 	return (
-		<section id='about__tips'>
+		<section id='about__tips' className={tipsFor ? tipsFor : ''}>
 			<div className='about__tips__content'>
-				<h1 className='title'>Be part of something bigger than yourself</h1>
+				<h1 className='title'>
+					{titleText ? titleText : 'Be part of something bigger than yourself'}
+				</h1>
 
 				<div className='tips__container'>
 					<Splide

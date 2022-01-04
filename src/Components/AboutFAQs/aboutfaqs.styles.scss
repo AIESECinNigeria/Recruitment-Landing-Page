@@ -18,6 +18,10 @@
 			line-height: 40px;
 			letter-spacing: -0.04em;
 			color: var(--AIESEC-Dark-Main);
+
+			@media screen and (max-width: 600px) {
+				margin-bottom: 40px;
+			}
 		}
 
 		.faqs__container {

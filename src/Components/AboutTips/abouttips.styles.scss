@@ -4,6 +4,70 @@
 	background: var(--AIESEC-Blue);
 	min-height: 548px;
 
+	&.GTa {
+		background: var(--AIESEC-GTa);
+
+		.about__tips__content .title {
+			max-width: 850px;
+
+			@media screen and (max-width: 650px) {
+				max-width: 90%;
+			}
+
+			@media screen and (max-width: 400px) {
+				max-width: 300px;
+			}
+		}
+	}
+
+	&.GV {
+		background: var(--AIESEC-GV-Red);
+
+		.about__tips__content .title {
+			max-width: 850px;
+
+			@media screen and (max-width: 650px) {
+				max-width: 90%;
+			}
+
+			@media screen and (max-width: 400px) {
+				max-width: 300px;
+			}
+		}
+	}
+
+	&.GTe {
+		background: var(--AIESEC-GTe);
+
+		.about__tips__content .title {
+			max-width: 850px;
+
+			@media screen and (max-width: 650px) {
+				max-width: 90%;
+			}
+
+			@media screen and (max-width: 400px) {
+				max-width: 300px;
+			}
+		}
+	}
+
+	&.AM {
+		background: var(--AIESEC-Blue);
+
+		.about__tips__content .title {
+			max-width: 850px;
+
+			@media screen and (max-width: 650px) {
+				max-width: 90%;
+			}
+
+			@media screen and (max-width: 400px) {
+				max-width: 300px;
+			}
+		}
+	}
+
 	.about__tips__content {
 		padding: 88px 0;
 		width: 100%;
@@ -16,7 +80,7 @@
 			max-width: 519px;
 			font-style: normal;
 			font-weight: bold;
-			font-size: 2rem;
+			font-size: 1.8rem;
 			line-height: 40px;
 			letter-spacing: -0.04em;
 			color: var(--white);

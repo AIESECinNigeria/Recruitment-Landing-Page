@@ -1,0 +1,78 @@
+#internship {
+	.opportunity__carousel {
+		width: 100%;
+		margin-top: 0;
+        margin-bottom: 72px;
+
+		&__content {
+			width: 100%;
+			height: 100%;
+			margin: 0 auto;
+			max-width: 1440px;
+			padding-left: 85px;
+
+			.top {
+				width: 100%;
+				max-width: 1135px;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				flex-wrap: wrap;
+				margin-bottom: 1.5rem;
+				padding-right: 0.5rem;
+
+				p {
+					font-weight: 600;
+					font-size: 0.9rem;
+					line-height: 24px;
+					color: var(--AIESEC-Dark-Sub);
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					padding: 0.5rem;
+
+					svg {
+						margin-left: 0.5rem;
+						color: var(--AIESEC-Dark-Sub);
+						transition: all 0.5s ease-in-out;
+					}
+
+					&:hover {
+						svg {
+							transform: translateX(10px);
+						}
+					}
+				}
+
+				.view__more {
+					display: block;
+
+					p {
+						font-weight: normal;
+						opacity: 0.8;
+
+                        &.GTa svg path{
+                            fill: var(--AIESEC-GTa);
+                        }
+            
+                        &.GV svg path{
+                            fill: var(--AIESEC-GV-Red);
+                        }
+            
+                        &.GTe svg path{
+                            fill: var(--AIESEC-GTe);
+                        }
+            
+                        &.AM svg path{
+                            fill: var(--AIESEC-Blue);
+                        }
+					}
+				}
+			}
+
+			@media screen and (max-width: 600px) {
+				padding-left: 1.5rem;
+			}
+		}
+	}
+}

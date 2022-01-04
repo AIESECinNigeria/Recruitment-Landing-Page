@@ -6,6 +6,7 @@ import OpportunityPortal from '../../Components/OpportunityPortal';
 import Testimonials from '../../Components/Testimonials';
 import BlogPreview from '../../Components/BlogPreview';
 import opportunityPortalData from '../../data/opportunityPortalData';
+import SubscribeEmail from '../../Components/SubscribeEmail';
 import './home.styles.scss';
 
 const Home: FC = () => {
@@ -33,6 +34,7 @@ const Home: FC = () => {
 			))}
 			<Testimonials />
 			<BlogPreview />
+			<SubscribeEmail />
 		</main>
 	);
 };

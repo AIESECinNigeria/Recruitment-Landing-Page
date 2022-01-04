@@ -4,7 +4,7 @@
 	align-items: center;
 	justify-content: center;
 	background: var(--white);
-	padding: 1rem;
+	padding: 1.5rem;
 
 	.footer__content {
 		width: 100%;
@@ -18,11 +18,13 @@
 
 			.contact__address {
 				flex: auto;
+				margin-right: 1rem;
 				margin-bottom: 2.5rem;
 
-				p, a {
-                    cursor: pointer;
-                    display: block;
+				p,
+				a {
+					cursor: pointer;
+					display: block;
 					font-style: italic;
 					font-weight: 300;
 					font-size: 0.9rem;
@@ -74,6 +76,7 @@
 								&.selected {
 									p.link__text {
 										font-weight: 500;
+										letter-spacing: -0.02em;
 										opacity: 1;
 									}
 								}
@@ -82,7 +85,7 @@
 					}
 				}
 
-				@media screen and (max-width: 1024px){
+				@media screen and (max-width: 1024px) {
 					margin-right: 2.2rem;
 				}
 			}
@@ -113,7 +116,7 @@
 
 					li {
 						height: 70%;
-                        margin-right: 10px;
+						margin-right: 10px;
 
 						a {
 							padding: 1rem 0;
@@ -137,13 +140,14 @@
 							&.selected {
 								p.link__text {
 									font-weight: 500;
+									letter-spacing: -0.02em;
 								}
 							}
 						}
 
-                        &.demacator{
-                            color: var(--AIESEC-Blue);
-                        }
+						&.demacator {
+							color: var(--AIESEC-Blue);
+						}
 					}
 				}
 			}

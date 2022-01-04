@@ -1,3 +1,5 @@
+import * as ROUTES from '../ROUTES';
+
 const opportunityPortalData = [
 	{
 		id: 'GTa',
@@ -8,7 +10,7 @@ const opportunityPortalData = [
 		opportunityText: `Develop your leadership while boosting your career prospects with an international internship in your field`,
 		organizationsText: 'A company, school or institution',
 		durationText: 'For 6 to 78 weeks',
-		learnMoreLink: '##',
+		learnMoreLink: ROUTES.GTa,
 		viewMoreOpportunitiesLink: '##',
 		opportunities: [
 			{
@@ -59,7 +61,7 @@ const opportunityPortalData = [
         contributing to one of the Sustainable Development Goals`,
 		organizationsText: 'A school, summer camp or an NGO',
 		durationText: 'For 6-8 weeks',
-		learnMoreLink: '##',
+		learnMoreLink: ROUTES.GV,
 		viewMoreOpportunitiesLink: '##',
 		opportunities: [
 			{
@@ -103,13 +105,13 @@ const opportunityPortalData = [
 	{
 		id: 'GTe',
 		logoUrl:
-			'https://res.cloudinary.com/dkaflz24l/image/upload/v1637839967/AiN%20Website%20Assets/gta-logo_peia6e.svg',
+			'https://res.cloudinary.com/dkaflz24l/image/upload/v1641270074/AiN%20Website%20Assets/gte_whhrms.svg',
 		logoAlt: 'GTe logo',
 		opportunityTitle: 'Become a Teacher',
 		opportunityText: `Develop your leadership through a volunteering project abroad, contributing to one of the Sustainable Development Goals`,
 		organizationsText: 'A school or institution',
 		durationText: 'For 9 to 78 weeks',
-		learnMoreLink: '##',
+		learnMoreLink: ROUTES.GTe,
 		viewMoreOpportunitiesLink: '##',
 		opportunities: [
 			{
@@ -160,7 +162,7 @@ const opportunityPortalData = [
 		organizationsText: 'AIESEC (our nearest local team)',
 		durationText: 'Minimum 6 months',
 		topText: 'Featured Member Departments',
-		learnMoreLink: '##',
+		learnMoreLink: ROUTES.AM,
 		viewMoreOpportunitiesLink: '##',
 		opportunities: [
 			{

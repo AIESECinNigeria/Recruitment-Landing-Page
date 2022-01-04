@@ -121,7 +121,10 @@ const AboutWhatWeDo: FC = () => {
 					</div>
 
 					<div className='illustration__image'>
-						<img src='/assets/images/LDM_artboard.png' alt='AIESEC values' />
+						<img
+							src='https://res.cloudinary.com/dkaflz24l/image/upload/v1641264013/AiN%20Website%20Assets/LDM_artboard_lju6lu.png'
+							alt='AIESEC values'
+						/>
 					</div>
 				</div>
 			</div>

@@ -1,0 +1,94 @@
+#cta__banner {
+	margin: 0 0 56px;
+
+	.cta__banner__content {
+		padding: 1rem;
+		min-height: 208px;
+		width: 100%;
+		max-width: 950px;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+
+		&__text {
+			font-style: italic;
+			font-weight: bold;
+			font-size: 1.8rem;
+			line-height: 40px;
+			color: #ffffff;
+			width: 100%;
+			max-width: 483px;
+			margin-right: 1rem;
+		}
+
+		button {
+			width: 100%;
+			max-width: 178px;
+			height: 56px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: none;
+			border: none;
+			font-style: normal;
+			font-weight: 600;
+			font-size: 0.9rem;
+			line-height: 24px;
+			background: var(--white);
+			border-radius: 4px;
+
+			&.GTa {
+				color: var(--AIESEC-GTa);
+			}
+
+			&.GV {
+				color: var(--AIESEC-GV-Red);
+			}
+
+			&.GTe {
+				color: var(--AIESEC-GTe);
+			}
+
+			&.AM {
+				color: var(--AIESEC-Blue);
+			}
+		}
+
+		@media screen and (max-width: 900px) {
+			flex-direction: column;
+			justify-content: center;
+
+			&__text {
+				text-align: center;
+				margin-bottom: 2rem;
+			}
+		}
+
+		@media screen and (max-width: 600px) {
+			padding: 3rem 1rem;
+			
+			&__text {
+				font-size: 1.3rem;
+				line-height: 32px;
+			}
+		}
+	}
+
+	&.GTa {
+		background: var(--AIESEC-GTa);
+	}
+
+	&.GV {
+		background: var(--AIESEC-GV-Red);
+	}
+
+	&.GTe {
+		background: var(--AIESEC-GTe);
+	}
+
+	&.AM {
+		background: var(--AIESEC-Blue);
+	}
+}

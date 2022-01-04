@@ -1,7 +1,8 @@
 import { FC, useRef } from 'react';
 import { BsArrowUpRight, BsChevronLeft, BsChevronRight } from 'react-icons/bs';
 
-import usePosition from '../../hooks/usePosition';
+import usePosition from '../../../hooks/usePosition';
+import './opportunitycarousel.style.scss';
 
 interface OpportunityCarouselProps {
 	parentId: string;

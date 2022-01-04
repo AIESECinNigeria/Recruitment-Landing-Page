@@ -16,16 +16,15 @@ const AboutHero: FC = () => {
 					organisation on a mission
 				</h1>
 
-                <div className="year__follow">
-                    <p className='year__founded'>1948</p>
+				<div className='year__follow'>
+					<p className='year__founded'>1948</p>
 
-                    <p className='follow__up__text'>
-                        AIESEC was founded way back in 1948 in 7 countries in Europe. Now,
-                        more than 65 years later we’re present in over 126 countries and
-                        territories and are still growing.
-                    </p>
-                </div>
-
+					<p className='follow__up__text'>
+						AIESEC was founded way back in 1948 in 7 countries in Europe. Now,
+						more than 65 years later we’re present in over 126 countries and
+						territories and are still growing.
+					</p>
+				</div>
 			</div>
 		</section>
 	);
