@@ -92,11 +92,8 @@ const MainContent: FC = () => {
 							heroBgBig='https://res.cloudinary.com/dkaflz24l/image/upload/v1641329983/AiN%20Website%20Assets/AM-banner-big_vhyboq.png'
 							heroBgSmall='https://res.cloudinary.com/dkaflz24l/image/upload/v1641330001/AiN%20Website%20Assets/AM-banner-small_egir30.png'
 							heroTitleText={
-								<p>
-									<span className='bold'>
-										Differentiate yourself with an international teaching
-										opportunity
-									</span>
+								<p className='AM'>
+									<span className='bold'>Become an AIESEC member</span>
 								</p>
 							}
 						/>

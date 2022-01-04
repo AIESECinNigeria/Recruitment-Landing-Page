@@ -19,8 +19,41 @@
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
+			flex-wrap: wrap-reverse;
 			padding-bottom: 48px;
 			border-bottom: 1px solid var(--outline);
+
+			&__text {
+				width: 100%;
+				max-width: 749px;
+				font-style: italic;
+				font-size: 2.7rem;
+				font-weight: 300;
+				line-height: 56px;
+				color: var(--AIESEC-Dark-Main);
+				margin-right: 2rem;
+
+				.AM {
+					max-width: 483px;
+				}
+
+				.bold {
+					font-weight: bold;
+				}
+
+				@media screen and (max-width: 500px) {
+					font-size: 24px;
+					line-height: 32px;
+				}
+			}
+
+			&__logo {
+				margin-bottom: 24px;
+			}
+
+            @media screen and (max-width: 500px) {
+                padding-bottom: 24px;
+            }
 		}
 
 		.about__internship {
@@ -103,11 +136,11 @@
 						background: var(--AIESEC-Blue);
 					}
 
-                    @media screen and (max-width: 500px) {
-                        margin-left: 0;
-                        width: 100%;
-                        max-width: 325px;
-                    }
+					@media screen and (max-width: 500px) {
+						margin-left: 0;
+						width: 100%;
+						max-width: 325px;
+					}
 				}
 
 				@media screen and (max-width: 870px) {
@@ -129,5 +162,9 @@
 				}
 			}
 		}
+	}
+
+	@media screen and (max-width: 500px) {
+		margin-bottom: 64px;
 	}
 }

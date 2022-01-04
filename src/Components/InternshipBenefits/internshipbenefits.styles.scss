@@ -1,0 +1,55 @@
+#internship__benefits {
+	width: 100%;
+	margin-bottom: 104px;
+	padding: 0 1rem;
+
+	.internship__benefits__content {
+		width: 100%;
+		max-width: 1920px;
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(274px, 1fr));
+		gap: 48px;
+
+		.internship__benefit {
+			width: 100%;
+			max-width: 274px;
+			margin: 0 auto;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+
+			.img__block {
+				width: 70px;
+				height: 70px;
+				background: var(--light-grey);
+				opacity: 0.3;
+				border-radius: 50%;
+				margin-bottom: 24px;
+			}
+
+			.text1 {
+				font-style: normal;
+				font-weight: bold;
+				font-size: 1.1rem;
+				line-height: 28px;
+				color: var(--AIESEC-Dark-Main);
+				margin-bottom: 8px;
+			}
+
+			.text2 {
+				font-style: italic;
+				font-weight: 300;
+				font-size: 1rem;
+				line-height: 24px;
+				text-align: center;
+				color: var(--AIESEC-Dark-Sub);
+			}
+		}
+	}
+
+	@media screen and (max-width: 500px) {
+		margin-bottom: 64px;
+	}
+}

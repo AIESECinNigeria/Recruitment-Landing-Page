@@ -2,6 +2,7 @@ import { FC, ReactElement } from 'react';
 import ArrowRightIcon from '../../assets/Svgs/ArrowRight';
 
 import InternshipHero from '../../Components/InternshipHero';
+import InternshipBenefits from '../../Components/InternshipBenefits';
 import AboutFAQs from '../../Components/AboutFAQs';
 import AboutTips from '../../Components/AboutTips';
 import CTABanner from '../../Components/CTABanner';
@@ -38,6 +39,7 @@ const Internship: FC<InternshipProps> = ({
 				heroBgSmall={heroBgSmall}
 				heroTitleText={heroTitleText}
 			/>
+            <InternshipBenefits />
 			<AboutTips
 				titleText='Develop your leadership while boosting your career prospects with an international internship in your field'
 				tipsFor={internshipData.id}
