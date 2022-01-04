@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, ReactElement } from 'react';
 
 import './internshiphero.styles.scss';
 
@@ -8,7 +8,9 @@ interface InternshipHeroProps {
 	logoAlt: string;
 	organizationsText: string;
 	durationText: string;
-	heroTitleText: HTMLParagraphElement;
+	heroBgBig: string;
+	heroBgSmall: string;
+	heroTitleText: ReactElement<any, any>;
 }
 
 const InternshipHero: FC<InternshipHeroProps> = ({
@@ -17,6 +19,8 @@ const InternshipHero: FC<InternshipHeroProps> = ({
 	logoAlt,
 	organizationsText,
 	durationText,
+	heroBgBig,
+	heroBgSmall,
 	heroTitleText,
 }) => {
 	return (
@@ -26,14 +30,14 @@ const InternshipHero: FC<InternshipHeroProps> = ({
 					<picture>
 						<source
 							media='(min-width:650px)'
-							srcSet='https://res.cloudinary.com/dkaflz24l/image/upload/v1641264232/AiN%20Website%20Assets/internship-hero-bg-big_plj72c.png'
+							srcSet={heroBgBig}
 						/>
 						<source
 							media='(min-width:320px)'
-							srcSet='https://res.cloudinary.com/dkaflz24l/image/upload/v1641264223/AiN%20Website%20Assets/internship-hero-bg-small_orucp7.png'
+							srcSet={heroBgSmall}
 						/>
 						<img
-							src='https://res.cloudinary.com/dkaflz24l/image/upload/v1641264232/AiN%20Website%20Assets/internship-hero-bg-big_plj72c.png'
+							src={heroBgBig}
 							alt='internship hero bg'
 							style={{ width: '100%' }}
 						/>

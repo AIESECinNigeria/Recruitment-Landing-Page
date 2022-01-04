@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, ReactElement } from 'react';
 import ArrowRightIcon from '../../assets/Svgs/ArrowRight';
 
 import InternshipHero from '../../Components/InternshipHero';
@@ -13,25 +13,31 @@ export interface InternshipProps {
 	bannerText: string;
 	ctaLink: string;
 	internshipData: InternshipDataProp;
-    heroTitleText: HTMLParagraphElement;
+    heroBgBig: string;
+	heroBgSmall: string;
+	heroTitleText: ReactElement<any, any>;
 }
 
 const Internship: FC<InternshipProps> = ({
 	bannerText,
 	ctaLink,
 	internshipData,
-    heroTitleText
+    heroBgBig,
+	heroBgSmall,
+	heroTitleText,
 }) => {
 	return (
 		<main id='internship'>
-            <InternshipHero 
-                id={internshipData.id}
-                logo={internshipData.logoUrl}
-                logoAlt = {internshipData.logoAlt}
-                organizationsText={internshipData.organizationsText}
-                durationText={internshipData.durationText}
-                heroTitleText={heroTitleText}
-            />
+			<InternshipHero
+				id={internshipData.id}
+				logo={internshipData.logoUrl}
+				logoAlt={internshipData.logoAlt}
+				organizationsText={internshipData.organizationsText}
+				durationText={internshipData.durationText}
+				heroBgBig={heroBgBig}
+				heroBgSmall={heroBgSmall}
+				heroTitleText={heroTitleText}
+			/>
 			<AboutTips
 				titleText='Develop your leadership while boosting your career prospects with an international internship in your field'
 				tipsFor={internshipData.id}
