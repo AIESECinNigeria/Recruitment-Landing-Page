@@ -7,37 +7,43 @@
 		max-width: 1920px;
 		margin: 0 auto;
 
-		.hero__text {
+		.hero__text__container{
 			width: 100%;
-			max-width: 601px;
 			margin: calc(12rem) 1rem 2.6rem 4rem;
+			overflow: hidden;
 
-			h1 {
-				font-style: italic;
-				font-weight: 300;
-				font-size: 3.1rem;
-				line-height: 64px;
-				color: var(--AIESEC-Dark-Main);
-				padding: .7rem;
-
-				span.highlighted {
-					font-weight: 700;
-				}
-			}
-
-			@media screen and (max-width: 800px) {
-				margin: calc(12rem) 1rem 2.6rem 1rem;
-			}
-
-			@media screen and (max-width: 480px) {
-				margin: calc(12rem) 1rem 2.6rem 1rem;
-
+			.hero__text {
+				width: 100%;
+				max-width: 601px;
+	
 				h1 {
-					font-size: 2.8rem;
-					line-height: 52px;
+					font-style: italic;
+					font-weight: 300;
+					font-size: 3.1rem;
+					line-height: 64px;
+					color: var(--AIESEC-Dark-Main);
+					padding: .7rem;
+	
+					span.highlighted {
+						font-weight: 700;
+					}
+				}
+	
+				@media screen and (max-width: 800px) {
+					margin: calc(12rem) 1rem 2.6rem 1rem;
+				}
+	
+				@media screen and (max-width: 480px) {
+					margin: calc(12rem) 1rem 2.6rem 1rem;
+	
+					h1 {
+						font-size: 2.8rem;
+						line-height: 52px;
+					}
 				}
 			}
 		}
+
 
 		.hero__search__experiences__container {
 			width: 100%;

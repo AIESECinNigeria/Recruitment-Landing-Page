@@ -4,8 +4,10 @@ import { AiOutlineSearch } from 'react-icons/ai';
 //@ts-ignore
 import ModalVideo from 'react-modal-video';
 //@ts-check
+import ScrollAnimation from 'react-animate-on-scroll';
 import Play from '../../assets/Svgs/play';
 import 'react-modal-video/scss/modal-video.scss';
+import 'animate.css/animate.min.css';
 import './homehero.styles.scss';
 
 const HomeHero: FC = () => {
@@ -29,22 +31,34 @@ const HomeHero: FC = () => {
 	return (
 		<section id='home__hero'>
 			<div className='home__hero__content'>
-				<div className='hero__text'>
-					<h1>
-						Connecting <span className='highlighted'>Young People</span> to Life
-						Changing <span className='highlighted'>Experiences.</span>
-					</h1>
+				<div className='hero__text__container'>
+					<ScrollAnimation
+						className='hero__text'
+						animateIn='animate__fadeInUp'
+						animateOnce={true}
+						duration={0.8}
+					>
+						<h1>
+							Connecting <span className='highlighted'>Young People</span> to
+							Life Changing <span className='highlighted'>Experiences.</span>
+						</h1>
+					</ScrollAnimation>
 				</div>
 
 				<div className='hero__search__experiences__container'>
-					<div className='hero__search__experiences'>
+					<ScrollAnimation
+						className='hero__search__experiences'
+						animateIn='animate__fadeInUp'
+						animateOnce={true}
+						duration={1}
+					>
 						<p className='search__placeholder'>
 							Search for an experience.{' '}
 							<span>E.g. Marketing, design, HR...</span>
 						</p>
 
 						<AiOutlineSearch />
-					</div>
+					</ScrollAnimation>
 				</div>
 
 				<div
