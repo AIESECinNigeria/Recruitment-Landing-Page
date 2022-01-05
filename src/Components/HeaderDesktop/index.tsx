@@ -1,4 +1,4 @@
-import { FC, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
 import BorderBottom from '../../assets/Svgs/BorderBottom';
@@ -6,13 +6,26 @@ import './headerdesktop.styles.scss';
 
 const Header: FC = () => {
 	const [navbarOpen, setNavbarOpen] = useState<boolean>(false);
+	const [headerFixed, setHeaderFixed] = useState<boolean>(false);
 
 	const toggleNavbar = () => {
 		setNavbarOpen((navbarOpen) => !navbarOpen);
 	};
 
+	const checkScrollHeight = () => {
+		if (window.scrollY === 0) {
+			setHeaderFixed(false);
+		} else {
+			setHeaderFixed(true);
+		}
+	};
+
+	useEffect(() => {
+		window.addEventListener('scroll', checkScrollHeight);
+	}, []);
+
 	return (
-		<header id='header__desktop'>
+		<header id='header__desktop' className={headerFixed ? 'fixed' : ''}>
 			<div className='header__desktop__content'>
 				<div className='AIESEC__logo'>
 					<NavLink to='/'>
