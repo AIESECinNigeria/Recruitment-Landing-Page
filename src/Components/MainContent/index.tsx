@@ -1,7 +1,8 @@
-import { FC, lazy } from 'react';
+import { FC, lazy, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import * as ROUTES from '../../ROUTES';
 
+import * as ROUTES from '../../ROUTES';
+import HoverOverlay from '../HoverOverlay';
 import HeaderDesktop from '../HeaderDesktop';
 import Footer from '../Footer';
 import './maincontent.styles.scss';
@@ -15,12 +16,15 @@ const Internship = lazy<FC<InternshipProps>>(
 );
 const Opportunities = lazy<FC>(() => import('../../pages/Opportunities'));
 const Organizations = lazy<FC>(() => import('../../pages/Organizations'));
-const Membership = lazy<FC>(() => import('../../pages/Membership'));
+// const Membership = lazy<FC>(() => import('../../pages/Membership'));
 
 const MainContent: FC = () => {
+	const [showOverlay, setShowOverlay] = useState<boolean>(false);
+
 	return (
 		<section id='main__content'>
-			<HeaderDesktop />
+			<HeaderDesktop setShowOverlay={setShowOverlay} />
+			<HoverOverlay show={showOverlay} />
 			<Routes>
 				<Route path={ROUTES.HOME} element={<Home />} />
 				<Route path={ROUTES.ABOUT} element={<About />} />
@@ -101,7 +105,7 @@ const MainContent: FC = () => {
 				/>
 				<Route path={ROUTES.OPPORTUNITIES} element={<Opportunities />} />
 				<Route path={ROUTES.ORGANIZATIONS} element={<Organizations />} />
-				<Route path={ROUTES.MEMBERSHIP} element={<Membership />} />
+				{/* <Route path={ROUTES.MEMBERSHIP} element={<Membership />} /> */}
 				<Route path='*' element={<p>Not found</p>} />
 			</Routes>
 			<Footer />
