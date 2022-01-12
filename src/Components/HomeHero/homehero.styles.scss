@@ -9,7 +9,7 @@
 
 		.hero__text__container {
 			width: 100%;
-			margin: calc(12rem) 1rem 2.6rem 4rem;
+			margin: calc(6rem) 1rem 6rem 2rem;
 			overflow: hidden;
 
 			.hero__text {
@@ -31,11 +31,11 @@
 			}
 
 			@media screen and (max-width: 800px) {
-				margin: calc(12rem) 1rem 2.6rem 1rem;
+				margin: calc(6rem) 1rem 6rem 1rem;
 			}
 
 			@media screen and (max-width: 480px) {
-				margin: calc(12rem) 1rem 2.6rem 1rem;
+				margin: calc(6rem) 1rem 6rem 1rem;
 
 				h1 {
 					font-size: 2.8rem;
@@ -44,59 +44,27 @@
 			}
 		}
 
-		.hero__search__experiences__container {
-			width: 100%;
-			max-width: 498px;
-			margin: 4.6rem 1rem 2.6rem 4rem;
-			.hero__search__experiences {
-				border-bottom: 1px solid var(--outline);
-				display: flex;
-				align-items: center;
-				padding: 1rem 0;
-				cursor: pointer;
-
-				.search__placeholder {
-					font-size: 1rem;
-					line-height: 24px;
-					letter-spacing: -0.01em;
-					color: var(--AIESEC-Dark-Sub);
-					white-space: nowrap;
-					overflow: hidden;
-					text-overflow: ellipsis;
-
-					span {
-						font-style: italic;
-						font-weight: 400;
-						color: var(--outline);
-					}
-				}
-
-				svg {
-					font-size: 1.2rem;
-					color: var(--AIESEC-Blue);
-					margin-left: 3rem;
-				}
-			}
-
-			@media screen and (max-width: 800px) {
-				margin: 3.6rem auto 2.6rem;
-				padding: 0.7rem;
-			}
-		}
-
 		.hero__reels {
 			width: 100%;
 			height: 335px;
-			margin: 2.6rem 0;
+			margin: 2.6rem 0 6rem;
 			position: relative;
 			cursor: pointer;
 
 			.poster {
 				width: 100%;
-				height: 100%;
 				position: absolute;
+				top: 0;
+				left: 0;
 				z-index: 1;
-				background: url('https://res.cloudinary.com/dkaflz24l/image/upload/v1637791882/AiN%20Website%20Assets/Reels-bg_adw2jt.png');
+				// background: url('https://img.youtube.com/vi/1u-74sc4IIs/hqdefault.jpg');
+				// background-size: contain;
+
+				img {
+					width: 100%;
+					height: 335px;
+					object-fit: cover;
+				}
 
 				&.hide {
 					z-index: -1;

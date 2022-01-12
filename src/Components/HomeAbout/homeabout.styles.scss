@@ -1,7 +1,7 @@
 #home__about {
 	width: 100%;
 	background: var(--white);
-	margin-bottom: 6rem;
+	margin-bottom: 10rem;
 
 	.home__about__content {
 		width: 100%;
@@ -23,7 +23,7 @@
 			line-height: 24px;
 			letter-spacing: -0.01em;
 			color: var(--AIESEC-Dark-Main);
-			margin-bottom: 1rem;
+			margin-bottom: 1.12rem;
 		}
 
 		.home__about__content__desc {
@@ -32,7 +32,7 @@
 			justify-content: center;
 			width: 100%;
 			max-width: 838px;
-			margin: 0 auto 3.6rem;
+			margin: 0 auto;
 			text-align: center;
 
 			.text {
@@ -43,113 +43,6 @@
 				letter-spacing: -0.01em;
 				color: var(--AIESEC-Dark-Sub);
 			}
-		}
-
-		.home__about__products {
-			width: 100%;
-			max-width: 1135px;
-			margin: 0 auto 3.5rem;
-			display: flex;
-			flex-flow: row wrap;
-			justify-content: center;
-
-			.product {
-				width: 374px;
-				height: 270px;
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				align-items: center;
-				border: 0.2px solid var(--outline);
-
-				&__title {
-					font-weight: bold;
-					font-size: 1.5rem;
-					line-height: 24px;
-					letter-spacing: -0.01em;
-					color: var(--AIESEC-Dark-Main);
-					margin-bottom: 0.5rem;
-				}
-
-				&__cta {
-					width: 100%;
-					max-width: 265px;
-					font-style: italic;
-					font-weight: 300;
-					font-size: 1rem;
-					line-height: 32px;
-					letter-spacing: -0.01em;
-					color: var(--AIESEC-Dark-Sub);
-					margin-bottom: 1.8rem;
-					text-align: center;
-				}
-
-				.learn__more {
-					display: block;
-
-					p {
-						font-weight: bold;
-						font-size: 0.9rem;
-						line-height: 24px;
-						color: var(--AIESEC-Dark-Sub);
-						display: flex;
-						align-items: center;
-
-						svg {
-							margin-left: 0.5rem;
-							color: var(--AIESEC-Blue);
-							transition: all 0.5s ease-in-out;
-						}
-					}
-
-					&:hover {
-						p svg {
-							transform: translateX(5px);
-						}
-					}
-				}
-			}
-		}
-
-		.home__about__partners {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			text-align: center;
-			width: 100%;
-			max-width: 1135px;
-			margin: 0 auto;
-			padding: 1rem;
-			overflow: hidden;
-			transform: translate3d(0, 0, 0);
-			
-			.partners__logos {
-				position: relative;
-				width: 1300px;
-				height: 181px;
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-				animation: moveSlideshow 9s ease-in-out infinite forwards;
-				transform: translate3d(0, 0, 0);
-
-				div {
-					margin-right: 2.2rem;
-					display: flex;
-					justify-content: center;
-					align-items: center;
-
-					img{
-						object-fit: cover;
-					}
-				}
-			}
-		}
-	}
-
-	@keyframes moveSlideshow {
-		100% {
-			transform: translateX(-80%);
 		}
 	}
 }

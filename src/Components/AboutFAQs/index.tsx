@@ -9,7 +9,6 @@ const AboutFAQs: FC = () => {
 	return (
 		<section id='about__faqs'>
 			<div className='about__faqs__content'>
-				<h1 className='title'>FAQs</h1>
 				<div className='faqs__container'>
 					{faqData.map((faq, index) => (
 						<div
@@ -21,13 +20,13 @@ const AboutFAQs: FC = () => {
 								onClick={() => setOpenFAQ((openFAQ) => openFAQ === index ? -1 : index)}
 							>
 								<p className='faq__title'>
-									{faq.key}. {faq.question}
+									{faq.question}
 								</p>
 								<button> {openFAQ !== index ? '+' : '-'} </button>
 							</div>
 
 							<div className='faq__content'>
-								<p>{faq.answer}</p>
+								<p>{faq.desc}</p>
 							</div>
 						</div>
 					))}

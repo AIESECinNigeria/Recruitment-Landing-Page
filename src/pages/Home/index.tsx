@@ -4,9 +4,8 @@ import HomeHero from '../../Components/HomeHero';
 import HomeAbout from '../../Components/HomeAbout';
 import OpportunityPortal from '../../Components/OpportunityPortal';
 import Testimonials from '../../Components/Testimonials';
-import BlogPreview from '../../Components/BlogPreview';
-import opportunityPortalData from '../../data/opportunityPortalData';
-import SubscribeEmail from '../../Components/SubscribeEmail';
+import JoinSteps from '../../Components/JoinSteps';
+import AboutFAQs from '../../Components/AboutFAQs';
 import './home.styles.scss';
 
 const Home: FC = () => {
@@ -14,27 +13,23 @@ const Home: FC = () => {
 		<main id='home'>
 			<HomeHero />
 			<HomeAbout />
-			{opportunityPortalData.map((opportunityPortal) => (
-				<OpportunityPortal
-					key={opportunityPortal.id}
-					id={opportunityPortal.id}
-					logoUrl={opportunityPortal.logoUrl}
-					logoAlt={opportunityPortal.logoAlt}
-					opportunityTitle={opportunityPortal.opportunityTitle}
-					opportunityText={opportunityPortal.opportunityText}
-					organizationsText={opportunityPortal.organizationsText}
-					durationText={opportunityPortal.durationText}
-					learnMoreLink={opportunityPortal.learnMoreLink}
-					topText={opportunityPortal.topText}
-					viewMoreOpportunitiesLink={
-						opportunityPortal.viewMoreOpportunitiesLink
-					}
-					opportunities={opportunityPortal.opportunities}
-				/>
-			))}
+			<OpportunityPortal
+				id={1}
+				logoUrl={
+					'https://res.cloudinary.com/dkaflz24l/image/upload/v1637840016/AiN%20Website%20Assets/membership-logo_mnvakp.svg'
+				}
+				logoAlt={'Gta logo'}
+			/>
+			<AboutFAQs />
 			<Testimonials />
-			<BlogPreview />
-			<SubscribeEmail />
+			<JoinSteps />
+			<OpportunityPortal
+				id={2}
+				logoUrl={
+					'https://res.cloudinary.com/dkaflz24l/image/upload/v1637840016/AiN%20Website%20Assets/membership-logo_mnvakp.svg'
+				}
+				logoAlt={'Gta logo'}
+			/>
 		</main>
 	);
 };

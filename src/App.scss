@@ -7,13 +7,14 @@
 	--AIESEC-Dark-Sub: #1d2129;
 	--AIESEC-Dark-Sub-rgb: 29, 33, 41;
 	--AIESEC-Dark-Main: #20252f;
+	--AIESEC-Black: #52565E;
 	--AIESEC-Blue: #037ef3;
 	--AIESEC-GTa: #0cb9c1;
 	--AIESEC-GTe: #f48924;
 	--AIESEC-GV-Red: #f85a40;
 	--AIESEC-Blue-rgb: 3, 126, 243;
 	--white: #ffffff;
-	--outline: #dcdcdc;
+	--outline: #CACCD1;
 	--light-grey: #a0a0a0;
 	font-size: 18px;
 
@@ -51,7 +52,8 @@ a {
 	text-decoration: none;
 }
 
-input {
+input,
+textarea {
 	transition: 0.5s;
 
 	&::placeholder {

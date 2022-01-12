@@ -45,22 +45,6 @@ const HomeHero: FC = () => {
 					</ScrollAnimation>
 				</div>
 
-				<div className='hero__search__experiences__container'>
-					<ScrollAnimation
-						className='hero__search__experiences'
-						animateIn='animate__fadeInUp'
-						animateOnce={true}
-						duration={1}
-					>
-						<p className='search__placeholder'>
-							Search for an experience.{' '}
-							<span>E.g. Marketing, design, HR...</span>
-						</p>
-
-						<AiOutlineSearch />
-					</ScrollAnimation>
-				</div>
-
 				<div
 					className='hero__reels'
 					onMouseEnter={() => {
@@ -73,11 +57,13 @@ const HomeHero: FC = () => {
 						posterRef.current!.className = 'poster';
 					}}
 				>
-					<div className='poster' ref={posterRef}></div>
+					<div className='poster' ref={posterRef}>
+						<img src="https://img.youtube.com/vi/1u-74sc4IIs/hqdefault.jpg" alt="video-poster" />
+					</div>
 
 					<video ref={videoRef} className='hero__reels__video' loop>
 						<source
-							src='https://res.cloudinary.com/dkaflz24l/video/upload/v1637792264/AiN%20Website%20Assets/video3_qo4t5z.mp4'
+							src='https://res.cloudinary.com/dkaflz24l/video/upload/v1641995540/AiN%20Website%20Assets/AIESEC_clipped_tuejib.mp4'
 							type='video/mp4'
 						/>
 						Your browser does not support the video tag.
@@ -98,7 +84,7 @@ const HomeHero: FC = () => {
 
 			<ModalVideo
 				channel='custom'
-				url='https://res.cloudinary.com/dkaflz24l/video/upload/v1637792264/AiN%20Website%20Assets/video3_qo4t5z.mp4'
+				url='https://www.youtube.com/watch?v=1u-74sc4IIs'
 				isOpen={videoIsOpen}
 				onClose={() => setVideoIsOpen(false)}
 			/>
