@@ -58,7 +58,10 @@ const HomeHero: FC = () => {
 					}}
 				>
 					<div className='poster' ref={posterRef}>
-						<img src="https://img.youtube.com/vi/1u-74sc4IIs/hqdefault.jpg" alt="video-poster" />
+						<img
+							src='https://img.youtube.com/vi/1u-74sc4IIs/hqdefault.jpg'
+							alt='video-poster'
+						/>
 					</div>
 
 					<video ref={videoRef} className='hero__reels__video' loop>
@@ -83,8 +86,8 @@ const HomeHero: FC = () => {
 			</div>
 
 			<ModalVideo
-				channel='custom'
-				url='https://www.youtube.com/watch?v=1u-74sc4IIs'
+				channel='youtube'
+				videoId='1u-74sc4IIs'
 				isOpen={videoIsOpen}
 				onClose={() => setVideoIsOpen(false)}
 			/>

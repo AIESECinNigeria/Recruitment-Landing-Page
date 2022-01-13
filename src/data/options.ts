@@ -27,6 +27,7 @@ export const motivationOptions: Array<{ value: string; label: string }> = [
 export const contactOptions: Array<{ value: string; label: string }> = [
 	{ value: 'Email', label: 'Email' },
 	{ value: 'Phone', label: 'Phone' },
+	{ value: 'Whatsapp', label: 'Whatsapp' },
 ];
 
 export const referralOptions: Array<{ value: string; label: string }> = [
