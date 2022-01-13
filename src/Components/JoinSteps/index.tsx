@@ -1,5 +1,6 @@
 import { FC } from 'react';
 
+import WigglyBig from '../../assets/Svgs/WigglyBig';
 import './joinsteps.styles.scss';
 
 const JoinSteps: FC = () => {
@@ -30,9 +31,8 @@ const JoinSteps: FC = () => {
 						</div>
 						<div className='border__desc'>
 							<p>
-								Each local team has a representative that would reach out to
-								you. You will get to know what the next steps are to become a
-								member of your local team.
+								A representative of the local team you select would reach out to
+								you to guide you throught the next steps to becoming a member.
 							</p>
 						</div>
 					</div>
@@ -43,12 +43,17 @@ const JoinSteps: FC = () => {
 						</div>
 						<div className='border__desc none'>
 							<p>
-								If you make it through the selection process, you would be
-								welcomes into one of our teams. Your leadership experience
-								starts now!
+								Once you successfully complete the application and selection
+								process, you would be officially welcomed into one of our local
+								teams. Your leadership experience starts now!
 							</p>
 						</div>
 					</div>
+				</div>
+
+				<div className="disclaimer">
+					<p><span className='note'>NOTE:</span> You would be required to pay a <span className='dark'>Membership fee</span>  during your application process.</p>
+					<WigglyBig />
 				</div>
 			</div>
 		</section>

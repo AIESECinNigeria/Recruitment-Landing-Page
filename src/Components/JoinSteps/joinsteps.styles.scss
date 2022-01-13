@@ -29,6 +29,7 @@
 			width: 100%;
 			display: flex;
 			flex-direction: column;
+			margin-bottom: 83px;
 
 			.step {
 				width: 50%;
@@ -178,6 +179,35 @@
 							border-right: none;
 							text-align: left;
 						}
+					}
+				}
+			}
+		}
+
+		.disclaimer {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			
+			p {
+				font-style: italic;
+				font-size: 1.12rem;
+				font-weight: 300;
+				line-height: 24px;
+				letter-spacing: -0.01em;
+				color: var(--AIESEC-Dark-Sub);
+				margin-bottom: 30px;
+
+				span {
+					&.note {
+						font-style: normal;
+						color: var(--AIESEC-Blue);
+						font-weight: bold;
+					}
+
+					&.dark {
+						font-weight: bold;
 					}
 				}
 			}
