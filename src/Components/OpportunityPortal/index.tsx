@@ -44,10 +44,7 @@ const OpportunityPortal: FC<OpportunityPortalProps> = ({
 
 					<p className='desc'>
 						{id === 1
-							? `	When you join one of our local AIESEC teams, you are assigned to a
-									smaller team in a specific department. Think of it as a simulation
-									of the departments in any organisation or company, buy your impact
-									will be a real one.`
+							? `	When you join AIESEC, you are assigned to a smaller team in a specific department with specialized roles. You'll get a real job, with real job descriptions that will allow you to make an impact in the organization, and by extension the world. `
 							: `Join one of our local teams and develop yourself through practical
 									experiences in the world’s largest youth lead organisation`}
 					</p>
