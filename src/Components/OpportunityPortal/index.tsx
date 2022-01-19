@@ -98,7 +98,7 @@ const OpportunityPortal: FC<OpportunityPortalProps> = ({
 			});
 			setIsFormSubmitted(true);
 		} catch (error: any) {
-			setErrorMessage(error.response.data);
+			setErrorMessage(error);
 		}
 	};
 
