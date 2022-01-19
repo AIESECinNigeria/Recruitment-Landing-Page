@@ -8,14 +8,14 @@ type DropdownOptionsProps = {
 	label: string;
 	options: Array<{ value: string; label: string }>;
 	value?: { value: string; label: string };
-	// onChange?: Dispatch<SetStateAction<string>>;
+	onChange?: Dispatch<SetStateAction<string>>;
 };
 
 const DropdownOptions: FC<DropdownOptionsProps> = ({
 	label,
 	options,
 	value,
-	// onChange,
+	onChange,
 }) => {
 	return (
 		<div className='dropdown'>
@@ -27,9 +27,9 @@ const DropdownOptions: FC<DropdownOptionsProps> = ({
 				controlClassName='custom__dropdown__control'
 				arrowClosed={<FaCaretDown />}
 				arrowOpen={<FaCaretUp />}
-				// onChange={(option: Option) =>
-				// 	onChange ? onChange(option.value) : null
-				// }
+				onChange={(option: Option) =>
+					onChange ? onChange(option.value) : null
+				}
 			/>
 		</div>
 	);

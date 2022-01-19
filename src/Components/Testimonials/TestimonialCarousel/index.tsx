@@ -11,8 +11,8 @@ const TestimonialCarousel: FC = () => {
 	const [testimoniesClass, setTesitmoniesClass] = useState<string>('next');
 
 	return (
-        <ScrollAnimation
-            className='testimonial__carousel'
+		<ScrollAnimation
+			className='testimonial__carousel'
 			animateIn='animate__bounceInLeft'
 		>
 			<div>
@@ -25,7 +25,9 @@ const TestimonialCarousel: FC = () => {
 							}`}
 						>
 							<blockquote className='testimony__quote'>
-								{testimony.quote}
+								{testimony.quote.map((quote, idx) => (
+									<p key={idx}>{quote}</p>
+								))}
 							</blockquote>
 
 							<div className='testifier'>
@@ -44,11 +46,9 @@ const TestimonialCarousel: FC = () => {
 						className='left'
 						onClick={() => {
 							setTesitmoniesClass('prev');
-							setCurrentTestimonyIndex((currentTestimonyIndex) => {
-								return currentTestimonyIndex === 0
-									? testimonies.length - 1
-									: currentTestimonyIndex - 1;
-							});
+							setCurrentTestimonyIndex(
+								(currentTestimonyIndex) => currentTestimonyIndex - 1
+							);
 						}}
 						disabled={currentTestimonyIndex.toString() === testimonies[0].id}
 					>

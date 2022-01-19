@@ -1,17 +1,17 @@
 export const LCOptions: Array<{ value: string; label: string }> = [
-	{ value: 'Abuja', label: 'Abuja' },
-	{ value: 'Akure', label: 'Akure' },
-	{ value: 'Benin', label: 'Benin' },
-	{ value: 'Benue', label: 'Benue' },
-	{ value: 'Calabar', label: 'Calabar' },
-	{ value: 'Enugu', label: 'Enugu' },
-	{ value: 'Ibadan', label: 'Ibadan' },
-	{ value: 'Ife', label: 'Ife' },
-	{ value: 'Ilorin', label: 'Ilorin' },
-	{ value: 'Jos', label: 'Jos' },
-	{ value: 'Lagos', label: 'Lagos' },
-	{ value: 'Port Harcourt', label: 'Port Harcourt' },
-	{ value: 'Others', label: 'Others' },
+	{ value: 'abuja', label: 'Abuja' },
+	{ value: 'akure', label: 'Akure' },
+	{ value: 'benin', label: 'Benin' },
+	{ value: 'benue', label: 'Benue' },
+	{ value: 'calabar', label: 'Calabar' },
+	{ value: 'enugu', label: 'Enugu' },
+	{ value: 'ibadan', label: 'Ibadan' },
+	{ value: 'ife', label: 'Ife' },
+	{ value: 'ilorin', label: 'Ilorin' },
+	{ value: 'jos', label: 'Jos' },
+	{ value: 'lagos', label: 'Lagos' },
+	{ value: 'portharcourt', label: 'Port Harcourt' },
+	{ value: 'others', label: 'Others' },
 ];
 
 export const motivationOptions: Array<{ value: string; label: string }> = [
@@ -25,40 +25,39 @@ export const motivationOptions: Array<{ value: string; label: string }> = [
 ];
 
 export const contactOptions: Array<{ value: string; label: string }> = [
-	{ value: 'Email', label: 'Email' },
-	{ value: 'Phone', label: 'Phone' },
-	{ value: 'Whatsapp', label: 'Whatsapp' },
+	{ value: 'email', label: 'Email' },
+	{ value: 'phone', label: 'Phone' },
+	{ value: 'whatsapp', label: 'Whatsapp' },
 ];
 
 export const referralOptions: Array<{ value: string; label: string }> = [
-	{ value: 'Friend', label: 'Friend' },
-	{ value: 'Information on campus', label: 'Information on campus' },
-	{ value: 'Email', label: 'Email' },
-	{ value: 'Event', label: 'Event' },
-	{ value: 'Facebook', label: 'Facebook' },
-	{ value: 'Instagram', label: 'Instagram' },
-	{ value: 'Whatsapp', label: 'Whatsapp' },
-	{ value: 'Other Social Media channel', label: 'Other Social Media channel' },
+	{ value: 'friend', label: 'Friend' },
+	{ value: 'information on campus', label: 'Information on campus' },
+	{ value: 'email', label: 'Email' },
+	{ value: 'event', label: 'Event' },
+	{ value: 'facebook', label: 'Facebook' },
+	{ value: 'instagram', label: 'Instagram' },
+	{ value: 'whatsapp', label: 'Whatsapp' },
+	{ value: 'other Social Media channel', label: 'Other Social Media channel' },
 ];
 
 export const academicOptions: Array<{ value: string; label: string }> = [
-	{ value: '100 lvl', label: '100 lvl' },
-	{ value: '200 lvl', label: '200 lvl' },
-	{ value: '300 lvl', label: '300 lvl' },
-	{ value: '400 lvl', label: '400 lvl' },
-	{ value: '500 lvl', label: '500 lvl' },
-	{ value: '600 lvl', label: '600 lvl' },
-	{ value: '700 lvl', label: '700 lvl' },
-	{ value: 'Graduate', label: 'Graduate' },
+	{ value: '100', label: '100 lvl' },
+	{ value: '200', label: '200 lvl' },
+	{ value: '300', label: '300 lvl' },
+	{ value: '400', label: '400 lvl' },
+	{ value: '500', label: '500 lvl' },
+	{ value: '600', label: '600 lvl' },
+	{ value: 'graduate', label: 'Graduate' },
 ];
 
 export const roleOptions: Array<{ value: string; label: string }> = [
-	{ value: 'Customer Experience', label: 'Customer Experience' },
-	{ value: 'Marketing', label: 'Marketing' },
+	{ value: 'customer experience', label: 'Customer Experience' },
+	{ value: 'marketing', label: 'Marketing' },
 	{
-		value: 'Sales and Business Development',
+		value: 'sales and business development',
 		label: 'Sales and Business Development',
 	},
-	{ value: 'Finance', label: 'Finance' },
-	{ value: 'Human Resources', label: 'Human Resources' },
+	{ value: 'finance', label: 'Finance' },
+	{ value: 'human resources', label: 'Human Resources' },
 ];

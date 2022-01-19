@@ -268,7 +268,36 @@
 					line-height: 24px;
 					letter-spacing: -0.01em;
 					margin-bottom: 58px;
+					transition: all 0.4s ease-in-out;
+
+					&:disabled {
+						opacity: 0.5;
+						cursor: not-allowed;
+					}
 				}
+
+				p.error__message {
+					width: 100%;
+					max-width: 480px;
+					margin: auto;
+					color: red;
+					font-style: normal;
+					font-weight: 400;
+					font-size: .8rem;
+					line-height: 18px;
+					letter-spacing: -0.01em;
+					margin-bottom: 5px;
+				}
+			}
+
+			p.thanks {
+				font-style: normal;
+				font-weight: normal;
+				font-size: 1rem;
+				line-height: 24px;
+				letter-spacing: -0.01em;
+				color: var(--white);
+				margin-bottom: 30px;
 			}
 		}
 	}
