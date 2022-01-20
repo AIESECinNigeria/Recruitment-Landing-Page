@@ -1,5 +1,5 @@
 import { Suspense } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import LoadingPage from './pages/loadingPage';
 import SidebarDesktop from './Components/SidebarDesktop';
@@ -10,10 +10,19 @@ const App = () => {
 	return (
 		<Suspense fallback={<LoadingPage />}>
 			<Router>
-				<div className='App'>
-					<SidebarDesktop />
-					<MainContent />
-				</div>
+				<Routes>
+					{['/', '/join-aiesec'].map((route) => (
+						<Route
+							path={route}
+							element={
+								<div className='App'>
+									<SidebarDesktop />
+									<MainContent />
+								</div>
+							}
+						/>
+					))}
+				</Routes>
 			</Router>
 		</Suspense>
 	);
