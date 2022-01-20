@@ -283,14 +283,18 @@
 					color: red;
 					font-style: normal;
 					font-weight: 400;
-					font-size: .8rem;
+					font-size: 0.8rem;
 					line-height: 18px;
 					letter-spacing: -0.01em;
 					margin-bottom: 5px;
 				}
 			}
 
-			p.thanks {
+			.thanks {
+				border-radius: 5px;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
 				font-style: normal;
 				font-weight: normal;
 				font-size: 1rem;
@@ -298,6 +302,41 @@
 				letter-spacing: -0.01em;
 				color: var(--white);
 				margin-bottom: 30px;
+				width: 266px;
+				min-height: 89px;
+				background: rgba(255, 255, 255, 0.19);
+				padding: 11px 0;
+
+				svg {
+					margin-bottom: 7px;
+				}
+
+				div {
+					width: 100%;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+
+					p {
+						&:first-child {
+							font-style: normal;
+							font-weight: bold;
+							font-size: 16px;
+							line-height: 24px;
+							letter-spacing: -0.01em;
+							color: #9ee800;
+						}
+
+						&:nth-child(2) {
+							font-style: normal;
+							font-weight: 300;
+							font-size: 12px;
+							line-height: 32px;
+							letter-spacing: -0.01em;
+							color: var(--white);
+						}
+					}
+				}
 			}
 		}
 	}

@@ -14,6 +14,7 @@ import {
 	roleOptions,
 } from '../../data/options';
 import DropdownOptions from './DropdownOptions';
+import CheckIcon from '../../assets/Svgs/Check';
 import {
 	ApplicationDetailsProps,
 	regValues,
@@ -158,9 +159,13 @@ const OpportunityPortal: FC<OpportunityPortalProps> = ({
 					)}
 
 					{isFormSubmitted ? (
-						<p className='thanks'>
-							* Application Received! Please check your mail for a feedback. *
-						</p>
+						<div className='thanks'>
+							<CheckIcon />
+							<div>
+								<p>Application Successful</p>
+								<p className="cta">Check your mailbox</p>
+							</div>
+						</div>
 					) : (
 						<form
 							id='join__AIESEC__form'
