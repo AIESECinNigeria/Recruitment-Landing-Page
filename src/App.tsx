@@ -16,9 +16,9 @@ const App = () => {
 		<Suspense fallback={<LoadingPage />}>
 			<Router>
 				<Routes>
-					<Route path='/' element={<Navigate to='/join-aiesec' />} />
+					<Route path='/' element={<Navigate to='/joinaiesec' />} />
 					<Route
-						path='/join-aiesec'
+						path='/joinaiesec'
 						element={
 							<div className='App'>
 								<SidebarDesktop />
