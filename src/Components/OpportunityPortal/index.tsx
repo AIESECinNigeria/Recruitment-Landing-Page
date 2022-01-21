@@ -163,7 +163,7 @@ const OpportunityPortal: FC<OpportunityPortalProps> = ({
 							<CheckIcon />
 							<div>
 								<p>Application Successful</p>
-								<p className="cta">Check your mailbox</p>
+								<p className='cta'>Check your mailbox</p>
 							</div>
 						</div>
 					) : (
@@ -211,7 +211,9 @@ const OpportunityPortal: FC<OpportunityPortalProps> = ({
 								type='tel'
 								placeholder='E.g +2349076543568'
 								required
-								onChange={({ target }) => setValue('phone', target.value.replaceAll(' ', ''))}
+								onChange={({ target }) =>
+									setValue('phone', target.value.replaceAll(' ', ''))
+								}
 							/>
 							<DropdownOptions
 								label='How do we contact you?'
