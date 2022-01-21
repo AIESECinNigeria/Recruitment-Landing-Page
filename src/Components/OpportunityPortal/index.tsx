@@ -209,7 +209,7 @@ const OpportunityPortal: FC<OpportunityPortalProps> = ({
 								id='phone'
 								label='Phone Number'
 								type='tel'
-								placeholder='Enter Phone number'
+								placeholder='E.g +2349076543568'
 								required
 								onChange={({ target }) => setValue('phone', target.value)}
 							/>
