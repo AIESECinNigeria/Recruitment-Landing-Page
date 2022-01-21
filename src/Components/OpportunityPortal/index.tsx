@@ -93,14 +93,16 @@ const OpportunityPortal: FC<OpportunityPortalProps> = ({
 			location: lcOption,
 		};
 
-		try {
-			await sendApplication({
-				data: specifiedData,
-			});
-			setIsFormSubmitted(true);
-		} catch (error: any) {
-			setErrorMessage(error.message);
-		}
+		console.log(specifiedData);
+
+		// try {
+		// 	await sendApplication({
+		// 		data: specifiedData,
+		// 	});
+		// 	setIsFormSubmitted(true);
+		// } catch (error: any) {
+		// 	setErrorMessage(error.message);
+		// }
 	};
 
 	useEffect(() => {
@@ -211,7 +213,7 @@ const OpportunityPortal: FC<OpportunityPortalProps> = ({
 								type='tel'
 								placeholder='E.g +2349076543568'
 								required
-								onChange={({ target }) => setValue('phone', target.value)}
+								onChange={({ target }) => setValue('phone', target.value.replaceAll(' ', ''))}
 							/>
 							<DropdownOptions
 								label='How do we contact you?'
