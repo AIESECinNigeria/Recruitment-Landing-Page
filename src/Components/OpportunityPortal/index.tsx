@@ -93,16 +93,14 @@ const OpportunityPortal: FC<OpportunityPortalProps> = ({
 			location: lcOption,
 		};
 
-		console.log(specifiedData);
-
-		// try {
-		// 	await sendApplication({
-		// 		data: specifiedData,
-		// 	});
-		// 	setIsFormSubmitted(true);
-		// } catch (error: any) {
-		// 	setErrorMessage(error.message);
-		// }
+		try {
+			await sendApplication({
+				data: specifiedData,
+			});
+			setIsFormSubmitted(true);
+		} catch (error: any) {
+			setErrorMessage(error.message);
+		}
 	};
 
 	useEffect(() => {
