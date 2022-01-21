@@ -48,7 +48,7 @@ export const academicOptions: Array<{ value: string; label: string }> = [
 	{ value: '400', label: '400 lvl' },
 	{ value: '500', label: '500 lvl' },
 	{ value: '600', label: '600 lvl' },
-	{ value: 'graduate', label: 'Graduate' },
+	{ value: '0', label: 'Graduate' },
 ];
 
 export const roleOptions: Array<{ value: string; label: string }> = [
