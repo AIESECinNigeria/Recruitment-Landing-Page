@@ -1,6 +1,5 @@
 import { FC, useRef, useState } from 'react';
 import { GrPlayFill } from 'react-icons/gr';
-import { AiOutlineSearch } from 'react-icons/ai';
 //@ts-ignore
 import ModalVideo from 'react-modal-video';
 //@ts-check
