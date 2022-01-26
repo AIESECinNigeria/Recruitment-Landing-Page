@@ -260,7 +260,7 @@ const OpportunityPortal: FC<OpportunityPortalProps> = ({
 								onChange={setReferralOption}
 							/>
 
-							<button disabled={!buttonActive}>
+							<button>
 								{' '}
 								{loading ? <Loader /> : 'Send Application'}
 							</button>
