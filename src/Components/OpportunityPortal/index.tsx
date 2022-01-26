@@ -235,6 +235,9 @@ const OpportunityPortal: FC<OpportunityPortalProps> = ({
 								onChange={({ target }) =>
 									setValue('phone', target.value.replaceAll(' ', ''))
 								}
+								onBlur={({ target }) =>
+									setValue('phone', target.value.replaceAll(' ', ''))
+								}
 							/>
 							<DropdownOptions
 								label='How do we contact you?'
