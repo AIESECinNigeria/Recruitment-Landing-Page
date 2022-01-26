@@ -45,8 +45,13 @@ const OpportunityPortal: FC<OpportunityPortalProps> = ({
 	const [motivationOption, setMotivationOption] = useState<string>(
 		'connect with a global community'
 	);
-	const { register, watch, setValue, handleSubmit } =
-		useForm<ApplicationDetailsProps>({});
+	const {
+		register,
+		watch,
+		setValue,
+		handleSubmit,
+		formState: { errors },
+	} = useForm<ApplicationDetailsProps>({});
 
 	const registerValues = (valueArr: regValues[]) => {
 		for (let value of valueArr) {
@@ -122,6 +127,22 @@ const OpportunityPortal: FC<OpportunityPortalProps> = ({
 			setButtonActive(false);
 		}
 	}, [watchFields]);
+
+	useEffect(() => {
+		//set error message if field is required
+		errors.firstname && setErrorMessage('firstname is required');
+		errors.lastname && setErrorMessage('lastname is required');
+		errors.dob && setErrorMessage('Date of birth is required');
+		errors.phone && setErrorMessage('phone number is required');
+		errors.course && setErrorMessage('course of Study is required');
+	}, [
+		errors.firstname,
+		errors.lastname,
+		errors.phone,
+		errors.email,
+		errors.course,
+		errors.dob,
+	]);
 
 	return (
 		<section id={id === 2 ? 'join-AIESEC' : ''} className='opportunity__portal'>
@@ -260,10 +281,7 @@ const OpportunityPortal: FC<OpportunityPortalProps> = ({
 								onChange={setReferralOption}
 							/>
 
-							<button>
-								{' '}
-								{loading ? <Loader /> : 'Send Application'}
-							</button>
+							<button> {loading ? <Loader /> : 'Send Application'}</button>
 
 							{errorMessage && (
 								<p className='error__message'>* {errorMessage} *</p>
