@@ -229,13 +229,10 @@ const OpportunityPortal: FC<OpportunityPortalProps> = ({
 							<FormInput
 								id='phone'
 								label='Phone Number'
-								type='tel'
+								type='text'
 								placeholder='E.g +2349076543568'
 								required
 								onChange={({ target }) =>
-									setValue('phone', target.value.replaceAll(' ', ''))
-								}
-								onBlur={({ target }) =>
 									setValue('phone', target.value.replaceAll(' ', ''))
 								}
 							/>
