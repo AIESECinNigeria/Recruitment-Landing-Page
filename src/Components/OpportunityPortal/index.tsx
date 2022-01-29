@@ -37,6 +37,7 @@ const OpportunityPortal: FC<OpportunityPortalProps> = ({
 	const [errorMessage, setErrorMessage] = useState<string>('');
 	const [isFormSubmitted, setIsFormSubmitted] = useState<boolean>(false);
 	const [buttonActive, setButtonActive] = useState<boolean>(false);
+	const [phoneNumber, setPhoneNumber] = useState<string>('');
 	const [contactOption, setContactOption] = useState<string>('email');
 	const [referralOption, setReferralOption] = useState<string>('friend');
 	const [academicOption, setAcademicOption] = useState<string>('100');
@@ -75,7 +76,6 @@ const OpportunityPortal: FC<OpportunityPortalProps> = ({
 		'lastname',
 		'dob',
 		'email',
-		'phone',
 		'course',
 	]);
 
@@ -90,6 +90,7 @@ const OpportunityPortal: FC<OpportunityPortalProps> = ({
 	const onSubmit = async (data: { [x: string]: any }) => {
 		const specifiedData = {
 			...data,
+			phone: phoneNumber,
 			contactAvenue: contactOption,
 			motivation: motivationOption,
 			bestRole: roleOption,
@@ -109,19 +110,12 @@ const OpportunityPortal: FC<OpportunityPortalProps> = ({
 	};
 
 	useEffect(() => {
-		registerValues([
-			'firstname',
-			'lastname',
-			'dob',
-			'phone',
-			'email',
-			'course',
-		]);
+		registerValues(['firstname', 'lastname', 'dob', 'email', 'course']);
 	}, []);
 
 	useEffect(() => {
 		// disable or enable submit button based on input values length
-		if (checkInputValues(watchFields)) {
+		if (checkInputValues(watchFields) && phoneNumber.length > 0) {
 			setButtonActive(true);
 		} else {
 			setButtonActive(false);
@@ -226,16 +220,18 @@ const OpportunityPortal: FC<OpportunityPortalProps> = ({
 								required
 								onChange={({ target }) => setValue('email', target.value)}
 							/>
-							<FormInput
-								id='phone'
-								label='Phone Number'
-								type='text'
-								placeholder='E.g +2349076543568'
-								required
-								onChange={({ target }) =>
-									setValue('phone', target.value.replaceAll(' ', ''))
-								}
-							/>
+							<div className='form__input'>
+								<label htmlFor='phone'>Phone Number</label>
+								<input
+									id='phone'
+									type='tel'
+									placeholder='E.g +2349076543568'
+									required
+									onChange={({ target }) =>
+										setPhoneNumber(target.value.replaceAll(' ', ''))
+									}
+								/>
+							</div>
 							<DropdownOptions
 								label='How do we contact you?'
 								options={contactOptions}
@@ -281,7 +277,10 @@ const OpportunityPortal: FC<OpportunityPortalProps> = ({
 								onChange={setReferralOption}
 							/>
 
-							<button> {loading ? <Loader /> : 'Send Application'}</button>
+							<button disabled={!buttonActive}>
+								{' '}
+								{loading ? <Loader /> : 'Send Application'}
+							</button>
 
 							{errorMessage && (
 								<p className='error__message'>* {errorMessage} *</p>
