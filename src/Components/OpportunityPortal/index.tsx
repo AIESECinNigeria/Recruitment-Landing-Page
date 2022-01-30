@@ -228,7 +228,7 @@ const OpportunityPortal: FC<OpportunityPortalProps> = ({
 									placeholder='E.g +2349076543568'
 									required
 									onChange={({ target }) =>
-										setPhoneNumber(target.value.replaceAll(' ', ''))
+										setPhoneNumber(target.value.replace(/\s+/g, ''))
 									}
 								/>
 							</div>
@@ -277,7 +277,7 @@ const OpportunityPortal: FC<OpportunityPortalProps> = ({
 								onChange={setReferralOption}
 							/>
 
-							<button>
+							<button disabled={!buttonActive}>
 								{' '}
 								{loading ? <Loader /> : 'Send Application'}
 							</button>
