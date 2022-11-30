@@ -12,6 +12,8 @@ import {
 	motivationOptions,
 	referralOptions,
 	roleOptions,
+	universityOptions,
+	yesNoOptions,
 } from '../../data/options';
 import DropdownOptions from './DropdownOptions';
 import CheckIcon from '../../assets/Svgs/Check';
@@ -33,6 +35,7 @@ const OpportunityPortal: FC<OpportunityPortalProps> = ({
 	logoAlt,
 }) => {
 	const buttonRef = useRef<HTMLButtonElement>(null);
+	const [isStudent, setIsStudent] = useState<string>('yes');
 	const [isFormOpen, setIsFormOpen] = useState<boolean>(false);
 	const [errorMessage, setErrorMessage] = useState<string>('');
 	const [isFormSubmitted, setIsFormSubmitted] = useState<boolean>(false);
@@ -41,6 +44,9 @@ const OpportunityPortal: FC<OpportunityPortalProps> = ({
 	const [contactOption, setContactOption] = useState<string>('email');
 	const [referralOption, setReferralOption] = useState<string>('friend');
 	const [academicOption, setAcademicOption] = useState<string>('100');
+	const [universityOption, setUniversityOption] = useState<string>(
+		'University of Abuja'
+	);
 	const [roleOption, setRoleOption] = useState<string>('customer experience');
 	const [lcOption, setLcOption] = useState<string>('abuja');
 	const [motivationOption, setMotivationOption] = useState<string>(
@@ -239,30 +245,46 @@ const OpportunityPortal: FC<OpportunityPortalProps> = ({
 								onChange={setContactOption}
 							/>
 							<DropdownOptions
-								label='Location'
+								label='Current Location'
 								options={LCOptions}
 								value={LCOptions[0]}
 								onChange={setLcOption}
 							/>
 							<DropdownOptions
+								label='Are you a student?'
+								options={yesNoOptions}
+								value={yesNoOptions[0]}
+								onChange={setIsStudent}
+							/>
+							{Boolean(isStudent === 'yes') && (
+								<>
+									<DropdownOptions
+										label={`Please select your University`}
+										options={universityOptions}
+										value={universityOptions[0]}
+										onChange={setUniversityOption}
+									/>
+									<DropdownOptions
+										label={`What’s your current academic level?`}
+										options={academicOptions}
+										value={academicOptions[0]}
+										onChange={setAcademicOption}
+									/>
+									<FormInput
+										id='degree'
+										label='Degree or Course of study?'
+										type='text'
+										placeholder='E.g Biology'
+										required
+										onChange={({ target }) => setValue('course', target.value)}
+									/>
+								</>
+							)}
+							<DropdownOptions
 								label='What is your motivation for joining  AIESEC?'
 								options={motivationOptions}
 								value={motivationOptions[0]}
 								onChange={setMotivationOption}
-							/>
-							<DropdownOptions
-								label={`What’s your current academic level?`}
-								options={academicOptions}
-								value={academicOptions[0]}
-								onChange={setAcademicOption}
-							/>
-							<FormInput
-								id='degree'
-								label='Degree or Course of study?'
-								type='text'
-								placeholder='E.g Biology'
-								required
-								onChange={({ target }) => setValue('course', target.value)}
 							/>
 							<DropdownOptions
 								label='What role do you think fits you best?'

@@ -41,7 +41,7 @@ const Header: FC<HeaderProps> = ({ setShowOverlay }) => {
 						<NavLink to={ROUTES.HOME}>
 							<div className='border'></div>
 							<img
-								src='https://res.cloudinary.com/dkaflz24l/image/upload/v1637753666/AiN%20Website%20Assets/AiN_Black_oraotj.png'
+								src='/assets/images/AIESECLogo.svg'
 								alt='AiN logo'
 							/>
 						</NavLink>

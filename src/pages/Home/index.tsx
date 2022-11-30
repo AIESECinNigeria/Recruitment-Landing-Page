@@ -16,7 +16,7 @@ const Home: FC = () => {
 			<OpportunityPortal
 				id={1}
 				logoUrl={
-					'https://res.cloudinary.com/dkaflz24l/image/upload/v1637840016/AiN%20Website%20Assets/membership-logo_mnvakp.svg'
+					'/assets/images/AIESEC_member.svg'
 				}
 				logoAlt={'Gta logo'}
 			/>
@@ -26,7 +26,7 @@ const Home: FC = () => {
 			<OpportunityPortal
 				id={2}
 				logoUrl={
-					'https://res.cloudinary.com/dkaflz24l/image/upload/v1637840016/AiN%20Website%20Assets/membership-logo_mnvakp.svg'
+					'/assets/images/AIESEC_member.svg'
 				}
 				logoAlt={'Gta logo'}
 			/>

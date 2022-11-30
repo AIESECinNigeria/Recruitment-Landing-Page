@@ -65,7 +65,7 @@ const HomeHero: FC = () => {
 
 					<video ref={videoRef} className='hero__reels__video' loop>
 						<source
-							src='https://res.cloudinary.com/dkaflz24l/video/upload/v1641995540/AiN%20Website%20Assets/AIESEC_clipped_tuejib.mp4'
+							src='/assets/images/trimmed.mp4'
 							type='video/mp4'
 						/>
 						Your browser does not support the video tag.
