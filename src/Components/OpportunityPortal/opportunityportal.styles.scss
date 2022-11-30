@@ -105,6 +105,10 @@
 					margin: 42px auto 68px;
 					max-height: 1637px;
 					padding: 58px 1rem;
+
+					@media screen and (max-width: 530px) {
+						max-height: 1670px;
+					}
 				}
 
 				.form__input {
