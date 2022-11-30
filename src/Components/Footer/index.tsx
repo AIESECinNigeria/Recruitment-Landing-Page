@@ -7,7 +7,7 @@ const Footer: FC = () => {
 		<footer id='footer'>
 			<div className='footer__content'>
 				<div className='copyright__policy'>
-					<p className='copyright'>&copy; AIESEC 2021</p>
+					<p className='copyright'>&copy; AIESEC 2022</p>
 				</div>
 			</div>
 		</footer>

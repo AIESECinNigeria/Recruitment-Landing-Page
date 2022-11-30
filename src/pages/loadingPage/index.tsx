@@ -11,7 +11,7 @@ const LoadingPage: FC = () => {
 				<div></div>
 			</div>
 
-			<p className='copyright__text__loading'>© Copyright AiN 2021.</p>
+			<p className='copyright__text__loading'>© Copyright AiN 2022.</p>
 		</section>
 	);
 };
