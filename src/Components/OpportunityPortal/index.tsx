@@ -45,7 +45,7 @@ const OpportunityPortal: FC<OpportunityPortalProps> = ({
 	const [referralOption, setReferralOption] = useState<string>('friend');
 	const [academicOption, setAcademicOption] = useState<string>('100');
 	const [universityOption, setUniversityOption] = useState<string>(
-		'University of Abuja'
+		'Baze University  of Nigeria'
 	);
 	const [roleOption, setRoleOption] = useState<string>('customer experience');
 	const [lcOption, setLcOption] = useState<string>('abuja');
