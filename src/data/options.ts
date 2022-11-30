@@ -15,63 +15,63 @@ export const LCOptions: Array<{ value: string; label: string }> = [
 ];
 
 export const universityOptions: Array<{ value: string; label: string }> = [
-	{ value: 'University of Abuja', label: 'University of Abuja' },
 	{
 		value: 'Baze University  of Nigeria',
 		label: 'Baze University  of Nigeria',
 	},
-	{ value: 'Bingham University', label: 'Bingham University' },
-	{
-		value: 'Federal University of Technology Akure',
-		label: 'Federal University of Technology Akure',
-	},
-	{ value: 'University of Benin', label: 'University of Benin' },
 	{ value: 'Benson Idahosa University', label: 'Benson Idahosa University' },
-	{ value: 'Ignatius Ajuru University ', label: 'Ignatius Ajuru University ' },
 	{
 		value: 'Benue State University, Nigeria',
 		label: 'Benue State University, Nigeria',
 	},
-	{
-		value: 'Joseph Sarwuan Tarka University',
-		label: 'Joseph Sarwuan Tarka University',
-	},
-	{ value: 'University of Calabar', label: 'University of Calabar' },
-	{
-		value: 'Cross River State University of Technology',
-		label: 'Cross River State University of Technology',
-	},
-	{
-		value: 'University of Nigeria Nsukka',
-		label: 'University of Nigeria Nsukka',
-	},
+	{ value: 'Bingham University', label: 'Bingham University' },
 	{ value: 'Caritas University', label: 'Caritas University' },
-	{
-		value: 'Federal Polytechnic, Ohodo ',
-		label: 'Federal Polytechnic, Ohodo ',
-	},
-	{ value: 'University of Ibadan', label: 'University of Ibadan' },
-	{ value: 'Lead City University', label: 'Lead City University' },
-	{ value: 'McPherson University', label: 'McPherson University' },
-	{ value: 'Obafemi Awolowo University', label: 'Obafemi Awolowo University' },
-	{ value: 'University of Ilorin', label: 'University of Ilorin' },
-	{
-		value: 'Kwara State Polytechnic, Ilorin',
-		label: 'Kwara State Polytechnic, Ilorin',
-	},
-	{ value: 'University of Jos', label: 'University of Jos' },
-	{ value: 'Univeristy of Lagos', label: 'Univeristy of Lagos' },
-	{ value: 'Yaba College of Technology', label: 'Yaba College of Technology' },
 	{
 		value: 'College of Education, Akoka',
 		label: 'College of Education, Akoka',
 	},
 	{
+		value: 'Cross River State University of Technology',
+		label: 'Cross River State University of Technology',
+	},
+	{
+		value: 'Federal Polytechnic, Ohodo ',
+		label: 'Federal Polytechnic, Ohodo ',
+	},
+	{ value: 'Federal University, Otuoke', label: 'Federal University, Otuoke' },
+	{
+		value: 'Federal University of Technology Akure',
+		label: 'Federal University of Technology Akure',
+	},
+	{ value: 'Ignatius Ajuru University ', label: 'Ignatius Ajuru University ' },
+	{
+		value: 'Joseph Sarwuan Tarka University',
+		label: 'Joseph Sarwuan Tarka University',
+	},
+	{
+		value: 'Kwara State Polytechnic, Ilorin',
+		label: 'Kwara State Polytechnic, Ilorin',
+	},
+	{ value: 'Lead City University', label: 'Lead City University' },
+	{ value: 'McPherson University', label: 'McPherson University' },
+	{ value: 'Obafemi Awolowo University', label: 'Obafemi Awolowo University' },
+	{ value: 'Rivers state university', label: 'Rivers state university' },
+	{ value: 'University of Abuja', label: 'University of Abuja' },
+	{ value: 'University of Benin', label: 'University of Benin' },
+	{ value: 'University of Calabar', label: 'University of Calabar' },
+	{ value: 'University of Ibadan', label: 'University of Ibadan' },
+	{ value: 'University of Ilorin', label: 'University of Ilorin' },
+	{ value: 'University of Jos', label: 'University of Jos' },
+	{ value: 'Univeristy of Lagos', label: 'Univeristy of Lagos' },
+	{
+		value: 'University of Nigeria Nsukka',
+		label: 'University of Nigeria Nsukka',
+	},
+	{
 		value: 'University of Port-Harcourt',
 		label: 'University of Port-Harcourt',
 	},
-	{ value: 'Rivers state university', label: 'Rivers state university' },
-	{ value: 'Federal University, Otuoke', label: 'Federal University, Otuoke' },
+	{ value: 'Yaba College of Technology', label: 'Yaba College of Technology' },
 	{ value: 'others', label: 'Others' },
 ];
 
