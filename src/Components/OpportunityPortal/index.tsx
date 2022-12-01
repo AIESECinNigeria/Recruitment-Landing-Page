@@ -44,6 +44,7 @@ const OpportunityPortal: FC<OpportunityPortalProps> = ({
 	const [contactOption, setContactOption] = useState<string>('email');
 	const [referralOption, setReferralOption] = useState<string>('friend');
 	const [academicOption, setAcademicOption] = useState<string>('100');
+	const [course, setCourse] = useState<string>('');
 	const [universityOption, setUniversityOption] = useState<string>(
 		'Baze University  of Nigeria'
 	);
@@ -63,7 +64,7 @@ const OpportunityPortal: FC<OpportunityPortalProps> = ({
 	const registerValues = (valueArr: regValues[]) => {
 		for (let value of valueArr) {
 			register(value, {
-				required: true,
+				required: value === 'course' ? false : true,
 			});
 		}
 	};
@@ -78,32 +79,40 @@ const OpportunityPortal: FC<OpportunityPortalProps> = ({
 
 	// watch for when the username and password values change
 	const watchFields: string[] = watch([
-		'firstname',
-		'lastname',
+		'firstName',
+		'lastName',
 		'dob',
 		'email',
-		'course',
 	]);
 
 	const [{ loading }, sendApplication] = useAxios(
 		{
-			url: '/signup',
+			url: '/recruitment/register',
 			method: 'post',
 		},
 		{ manual: true }
 	);
 
 	const onSubmit = async (data: { [x: string]: any }) => {
-		const specifiedData = {
+		const defaultData = {
 			...data,
 			phone: phoneNumber,
 			contactAvenue: contactOption,
 			motivation: motivationOption,
 			bestRole: roleOption,
 			referral: referralOption,
-			level: academicOption,
 			location: lcOption,
+			isStudent: Boolean(isStudent === 'yes'),
 		};
+
+		const specifiedData = Boolean(isStudent === 'yes')
+			? {
+					...defaultData,
+					course,
+					level: academicOption,
+					university: isStudent === 'yes' ? universityOption : 'Nil',
+			  }
+			: defaultData;
 
 		try {
 			await sendApplication({
@@ -111,18 +120,24 @@ const OpportunityPortal: FC<OpportunityPortalProps> = ({
 			});
 			setIsFormSubmitted(true);
 		} catch (error: any) {
-			setErrorMessage(error?.response?.data?.errors[0]?.msg);
+			setErrorMessage(
+				error?.response?.data?.errors?.[0]?.msg ?? error?.response?.data?.error
+			);
 		}
 	};
 
 	useEffect(() => {
-		registerValues(['firstname', 'lastname', 'dob', 'email', 'course']);
+		registerValues(['firstName', 'lastName', 'dob', 'email']);
 	}, []);
 
 	useEffect(() => {
 		// disable or enable submit button based on input values length
 		if (checkInputValues(watchFields) && phoneNumber.length > 0) {
-			setButtonActive(true);
+			const allFieldsFilled = Boolean(isStudent === 'yes' && course === '')
+				? false
+				: true;
+
+			setButtonActive(allFieldsFilled);
 		} else {
 			setButtonActive(false);
 		}
@@ -130,14 +145,14 @@ const OpportunityPortal: FC<OpportunityPortalProps> = ({
 
 	useEffect(() => {
 		//set error message if field is required
-		errors.firstname && setErrorMessage('firstname is required');
-		errors.lastname && setErrorMessage('lastname is required');
+		errors.firstName && setErrorMessage('firstname is required');
+		errors.lastName && setErrorMessage('lastname is required');
 		errors.dob && setErrorMessage('Date of birth is required');
 		errors.phone && setErrorMessage('phone number is required');
 		errors.course && setErrorMessage('course of Study is required');
 	}, [
-		errors.firstname,
-		errors.lastname,
+		errors.firstName,
+		errors.lastName,
 		errors.phone,
 		errors.email,
 		errors.course,
@@ -195,20 +210,20 @@ const OpportunityPortal: FC<OpportunityPortalProps> = ({
 						>
 							<div className='name'>
 								<FormInput
-									id='firstname'
+									id='firstName'
 									label='First Name'
 									type='text'
 									placeholder='E.g John'
 									required
-									onChange={({ target }) => setValue('firstname', target.value)}
+									onChange={({ target }) => setValue('firstName', target.value)}
 								/>
 								<FormInput
-									id='lastname'
+									id='lastName'
 									label='Last Name'
 									type='text'
 									placeholder='E.g Doe'
 									required
-									onChange={({ target }) => setValue('lastname', target.value)}
+									onChange={({ target }) => setValue('lastName', target.value)}
 								/>
 							</div>
 							<FormInput
@@ -276,7 +291,7 @@ const OpportunityPortal: FC<OpportunityPortalProps> = ({
 										type='text'
 										placeholder='E.g Biology'
 										required
-										onChange={({ target }) => setValue('course', target.value)}
+										onChange={({ target }) => setCourse(target.value)}
 									/>
 								</>
 							)}

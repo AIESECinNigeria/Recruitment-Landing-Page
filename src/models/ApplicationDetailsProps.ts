@@ -1,21 +1,23 @@
 export interface ApplicationDetailsProps {
-	firstname: string;
-	lastname: string;
+	firstName: string;
+	lastName: string;
 	email: string;
 	phone: string;
 	dob: string;
 	location: string;
-	course: string;
 	referral: string;
 	bestRole: string;
 	motivation: string;
-	level: string;
 	contactAvenue: string;
+	isStudent: boolean;
+	course?: string;
+	university?: string;
+	level?: string;
 }
 
 export type regValues =
-	| 'firstname'
-	| 'lastname'
+	| 'firstName'
+	| 'lastName'
 	| 'email'
 	| 'phone'
 	| 'dob'
@@ -25,4 +27,7 @@ export type regValues =
 	| 'bestRole'
 	| 'motivation'
 	| 'level'
-	| 'contactAvenue';
+	| 'contactAvenue'
+	| 'isStudent'
+	| 'university';
+

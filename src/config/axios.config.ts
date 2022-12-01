@@ -1,7 +1,7 @@
 import Axios from 'axios';
 
 const axios = Axios.create({
-	baseURL: 'https://ainform-api.herokuapp.com',
+	baseURL: 'https://nextjs-blog-steel-ten-76.vercel.app/api',
 });
 
 axios.interceptors.request.use(
