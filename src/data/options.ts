@@ -1,4 +1,5 @@
 export const LCOptions: Array<{ value: string; label: string }> = [
+	{value: 'abeokuta', label: 'Abeokuta'},
 	{ value: 'abuja', label: 'Abuja' },
 	{ value: 'ondo', label: 'Ondo' },
 	{ value: 'edo', label: 'Edo' },
@@ -39,6 +40,10 @@ export const universityOptions: Array<{ value: string; label: string }> = [
 		label: 'Federal Polytechnic, Ohodo ',
 	},
 	{ value: 'Federal University, Otuoke', label: 'Federal University, Otuoke' },
+	{
+		value: 'Federal University of Agriculture, Abeokuta',
+		label: 'Federal University of Agriculture, Abeokuta',
+	},
 	{
 		value: 'Federal University of Technology Akure',
 		label: 'Federal University of Technology Akure',

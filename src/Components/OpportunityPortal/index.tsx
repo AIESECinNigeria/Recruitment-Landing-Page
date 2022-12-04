@@ -49,7 +49,7 @@ const OpportunityPortal: FC<OpportunityPortalProps> = ({
 		'Baze University  of Nigeria'
 	);
 	const [roleOption, setRoleOption] = useState<string>('customer experience');
-	const [lcOption, setLcOption] = useState<string>('abuja');
+	const [lcOption, setLcOption] = useState<string>('abeokuta');
 	const [motivationOption, setMotivationOption] = useState<string>(
 		'connect with a global community'
 	);
